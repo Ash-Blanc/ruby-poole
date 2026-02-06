@@ -104,6 +104,8 @@ const teamMembers = [
     profileUrl: 'https://www.zillow.com/profile/TaylorHullCrowell',
   },
 ]
+
+const teamLeader = teamMembers[0]
 </script>
 
 <template>
@@ -119,8 +121,8 @@ const teamMembers = [
         <div class="card bg-base-100 lg:card-side overflow-hidden">
           <figure class="lg:w-72 bg-base-200">
             <img 
-              :src="teamMembers[0].image" 
-              :alt="teamMembers[0].name"
+              :src="teamLeader.image" 
+              :alt="teamLeader.name"
               class="w-full h-full object-cover"
             />
           </figure>
@@ -140,14 +142,14 @@ const teamMembers = [
                 <span>160 sales in 12 months</span>
               </div>
             </div>
-
+ 
             <div class="flex flex-wrap gap-3">
               <a href="#contact" class="btn btn-primary gap-2">
                 <Phone class="w-4 h-4" />
                 Contact Ruby
               </a>
               <a 
-                :href="teamMembers[0].profileUrl" 
+                :href="teamLeader.profileUrl" 
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-outline gap-2"
