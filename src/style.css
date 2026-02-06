@@ -1,0 +1,209 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+    themes: light, dark, luxury;
+}
+
+/* Custom Ruby Poole Theme */
+@plugin "daisyui/theme" {
+  name: "ruby";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  /* Warm, elegant real estate palette */
+  --color-base-100: oklch(99% 0.003 60);
+  --color-base-200: oklch(97% 0.006 60);
+  --color-base-300: oklch(94% 0.008 60);
+  --color-base-content: oklch(22% 0.015 60);
+  
+  /* Ruby/Coral primary */
+  --color-primary: oklch(52% 0.2 12);
+  --color-primary-content: oklch(98% 0.005 15);
+  
+  /* Gold/Champagne secondary */
+  --color-secondary: oklch(65% 0.14 80);
+  --color-secondary-content: oklch(18% 0.02 80);
+  
+  /* Teal accent */
+  --color-accent: oklch(58% 0.14 180);
+  --color-accent-content: oklch(98% 0.005 180);
+  
+  /* Neutral tones */
+  --color-neutral: oklch(32% 0.015 60);
+  --color-neutral-content: oklch(98% 0.005 60);
+  
+  /* Status colors */
+  --color-info: oklch(62% 0.16 235);
+  --color-info-content: oklch(98% 0.005 235);
+  --color-success: oklch(58% 0.18 150);
+  --color-success-content: oklch(98% 0.005 150);
+  --color-warning: oklch(75% 0.16 75);
+  --color-warning-content: oklch(22% 0.02 75);
+  --color-error: oklch(55% 0.2 20);
+  --color-error-content: oklch(98% 0.005 20);
+
+  /* Refined border radius */
+  --radius-selector: 0.625rem;
+  --radius-field: 0.375rem;
+  --radius-box: 0.75rem;
+
+  /* Subtle depth and shadows */
+  --depth: 1;
+  --noise: 0;
+}
+
+/* Premium Typography - DM Serif Display + Inter */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Spacing scale for consistency */
+  --space-section: clamp(4rem, 8vw, 7rem);
+  --space-component: clamp(2rem, 4vw, 3rem);
+  --space-element: clamp(1rem, 2vw, 1.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* Responsive typography scale */
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.875rem, 4vw, 2.75rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+}
+
+/* Enhanced micro-animations */
+.btn {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -8px currentColor;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.card {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+}
+
+/* Improved glassmorphism */
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Section spacing - more generous */
+section {
+  padding-top: var(--space-section);
+  padding-bottom: var(--space-section);
+}
+
+/* Container with proper padding */
+.container-custom {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 2.5rem);
+  padding-right: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+/* Component spacing helpers */
+.section-header {
+  margin-bottom: var(--space-component);
+  text-align: center;
+}
+
+.section-header h2 {
+  margin-bottom: 0.75rem;
+}
+
+.section-header p {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: oklch(45% 0.02 60);
+}
+
+/* Card grid with improved gaps */
+.card-grid {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+/* Icon styling */
+.icon {
+  width: 1.25em;
+  height: 1.25em;
+  stroke-width: 1.75;
+}
+
+.icon-lg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.icon-xl {
+  width: 2em;
+  height: 2em;
+}
+
+/* Badge improvements */
+.badge {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+/* Stats improvements */
+.stat-value {
+  font-family: var(--font-display);
+}
+
+/* Form field spacing */
+.form-control {
+  margin-bottom: 1rem;
+}
+
+.form-control:last-child {
+  margin-bottom: 0;
+}
+
+/* Focus states */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px oklch(52% 0.2 12 / 0.2);
+}
