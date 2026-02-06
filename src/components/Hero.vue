@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Star, MapPin, Phone, ArrowRight, Award, CheckCircle2 } from 'lucide-vue-next'
+import Logo from '@/components/Logo.vue'
 </script>
 
 <template>
@@ -57,8 +58,8 @@ import { Star, MapPin, Phone, ArrowRight, Award, CheckCircle2 } from 'lucide-vue
         <div class="flex justify-center lg:justify-end">
           <div class="glass-card rounded-2xl p-8 max-w-md w-full">
             <!-- Agent Photo Placeholder -->
-            <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center">
-              <span class="text-4xl font-display text-primary">RP</span>
+            <div class="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+              <Logo :size="128" />
             </div>
 
             <div class="text-center mb-6">
@@ -89,7 +90,7 @@ import { Star, MapPin, Phone, ArrowRight, Award, CheckCircle2 } from 'lucide-vue
                 <div class="text-xs text-base-content/60 mt-1">Sales/Year</div>
               </div>
               <div class="text-center">
-                <div class="text-2xl font-display text-primary">9</div>
+                <div class="text-2xl font-display text-primary">10</div>
                 <div class="text-xs text-base-content/60 mt-1">Team Members</div>
               </div>
             </div>

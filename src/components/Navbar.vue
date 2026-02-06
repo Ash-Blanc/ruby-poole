@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Home, Users, Building2, Phone, Menu, X } from 'lucide-vue-next'
+import Logo from '@/components/Logo.vue'
 
 const isMenuOpen = ref(false)
 
@@ -17,22 +18,16 @@ const navLinks = [
     <div class="container-custom">
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
-        <a href="#home" class="flex items-center gap-3 group">
-          <div class="w-11 h-11 rounded-xl bg-primary flex items-center justify-center transition-transform group-hover:scale-105">
-            <span class="text-primary-content font-display text-xl font-semibold">RP</span>
-          </div>
-          <div class="hidden sm:block">
-            <span class="font-display text-xl block leading-tight">Ruby Poole</span>
-            <span class="text-xs text-base-content/60 tracking-wide">Real Estate Team</span>
-          </div>
-        </a>
+        <RouterLink to="/" class="flex items-center gap-3 group">
+          <Logo :size="48" />
+        </RouterLink>
 
         <!-- Desktop Navigation -->
         <div class="hidden lg:flex items-center gap-10">
           <a
             v-for="link in navLinks"
             :key="link.name"
-            :href="link.href"
+            :href="link.href.startsWith('#') ? '/' + link.href : link.href"
             class="flex items-center gap-2 text-base-content/70 hover:text-primary font-medium transition-colors py-2"
           >
             <component :is="link.icon" class="w-4 h-4" :stroke-width="2" />
@@ -42,7 +37,7 @@ const navLinks = [
 
         <!-- Actions -->
         <div class="flex items-center gap-3">
-          <a href="#contact" class="btn btn-primary btn-sm hidden md:inline-flex gap-2 px-5">
+          <a :href="'/#contact'" class="btn btn-primary btn-sm hidden md:inline-flex gap-2 px-5">
             <Phone class="w-4 h-4" />
             Get in Touch
           </a>
@@ -73,7 +68,7 @@ const navLinks = [
             <a
               v-for="link in navLinks"
               :key="link.name"
-              :href="link.href"
+              :href="link.href.startsWith('#') ? '/' + link.href : link.href"
               @click="isMenuOpen = false"
               class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-base-200 transition-colors"
             >
@@ -81,7 +76,7 @@ const navLinks = [
               <span class="font-medium">{{ link.name }}</span>
             </a>
             <div class="pt-4 px-4">
-              <a href="#contact" class="btn btn-primary w-full gap-2">
+              <a href="/#contact" class="btn btn-primary w-full gap-2">
                 <Phone class="w-4 h-4" />
                 Contact Us
               </a>

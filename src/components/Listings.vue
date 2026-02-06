@@ -1,74 +1,75 @@
 <script setup lang="ts">
-import { Bed, Bath, Ruler, MapPin, ArrowRight } from 'lucide-vue-next'
+import { Bed, Bath, MapPin, ArrowRight, ExternalLink } from 'lucide-vue-next'
 
+// Real listings from Ruby Poole's Zillow profile (26 For Sale, 1274+ Sold)
 const listings = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop',
-    price: '$475,000',
-    address: '709 W Crest View Ct',
-    city: 'Fayetteville, AR',
-    beds: 4,
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+    price: '$249,000',
+    address: '2351 W Skyler Dr',
+    city: 'Fayetteville, AR 72703',
+    beds: 2,
     baths: 3,
-    sqft: '2,847',
     status: 'For Sale',
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop',
-    price: '$424,900',
-    address: '2580 W Nottingham Dr',
-    city: 'Fayetteville, AR',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
+    price: '$449,950',
+    address: '4749 Cowboy St',
+    city: 'Springdale, AR 72762',
     beds: 4,
     baths: 2,
-    sqft: '2,100',
     status: 'For Sale',
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop',
-    price: '$620,000',
-    address: '4203 W Willowbrook Rd',
-    city: 'Rogers, AR',
-    beds: 5,
-    baths: 4,
-    sqft: '3,450',
+    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80',
+    price: '$445,950',
+    address: '7699 Scenic Valley Ave',
+    city: 'Springdale, AR 72762',
+    beds: 4,
+    baths: 2,
     status: 'For Sale',
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&h=400&fit=crop',
-    price: '$349,900',
-    address: '1124 W Laurel Ave',
-    city: 'Springdale, AR',
+    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80',
+    price: '$299,900',
+    address: '397 Thompson St',
+    city: 'Centerton, AR 72719',
     beds: 3,
     baths: 2,
-    sqft: '1,890',
-    status: 'Pending',
+    status: 'For Sale',
   },
   {
     id: 5,
-    image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&h=400&fit=crop',
-    price: '$299,000',
-    address: '802 SW 14th St',
-    city: 'Bentonville, AR',
-    beds: 3,
+    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+    price: '$445,950',
+    address: '7735 Scenic Valley Ave',
+    city: 'Springdale, AR 72762',
+    beds: 4,
     baths: 2,
-    sqft: '1,650',
     status: 'For Sale',
   },
   {
     id: 6,
-    image: 'https://images.unsplash.com/photo-1600573472556-e636c2acda88?w=600&h=400&fit=crop',
-    price: '$525,000',
-    address: '5612 S Pinnacle Pointe Dr',
-    city: 'Rogers, AR',
+    image: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&q=80',
+    price: '$465,000',
+    address: '67 Pamona Dr',
+    city: 'Bella Vista, AR 72715',
     beds: 4,
     baths: 3,
-    sqft: '2,980',
-    status: 'For Sale',
+    status: 'Sold',
   },
 ]
+
+const stats = {
+  forSale: 26,
+  sold: 1274,
+  totalListings: 1300,
+}
 </script>
 
 <template>
@@ -76,7 +77,7 @@ const listings = [
     <div class="container-custom">
       <div class="section-header">
         <h2>Featured Properties</h2>
-        <p>Handpicked homes in Northwest Arkansas's most desirable neighborhoods</p>
+        <p>Browse {{ stats.forSale }} active listings • {{ stats.sold.toLocaleString() }}+ homes sold</p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -86,15 +87,17 @@ const listings = [
           class="card bg-base-100 overflow-hidden group cursor-pointer"
         >
           <!-- Image -->
-          <figure class="relative aspect-[4/3] overflow-hidden">
+          <figure class="relative aspect-[4/3] overflow-hidden bg-base-200">
             <img
               :src="listing.image"
               :alt="listing.address"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+              @error="($event.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop'"
             />
             <div
-              class="absolute top-4 left-4 badge font-semibold"
-              :class="listing.status === 'Pending' ? 'badge-warning' : 'badge-primary'"
+              class="absolute top-4 left-4 badge badge-md py-3 px-4 h-auto font-semibold border-none shadow-sm"
+              :class="listing.status === 'Sold' ? 'badge-success' : 'badge-primary'"
             >
               {{ listing.status }}
             </div>
@@ -121,19 +124,20 @@ const listings = [
                 <Bath class="w-4 h-4 text-base-content/50" />
                 <span class="text-sm">{{ listing.baths }} Baths</span>
               </div>
-              <div class="flex items-center gap-2">
-                <Ruler class="w-4 h-4 text-base-content/50" />
-                <span class="text-sm">{{ listing.sqft }} sqft</span>
-              </div>
             </div>
           </div>
         </article>
       </div>
 
       <div class="text-center mt-12">
-        <a href="#contact" class="btn btn-outline btn-lg gap-2">
-          View All Listings
-          <ArrowRight class="w-5 h-5" />
+        <a 
+          href="https://www.zillow.com/profile/RubyPoole1" 
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary btn-lg gap-2"
+        >
+          View All Listings on Zillow
+          <ExternalLink class="w-5 h-5" />
         </a>
       </div>
     </div>

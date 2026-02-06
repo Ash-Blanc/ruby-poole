@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Facebook, Instagram, Linkedin, Youtube, MapPin, Phone, Mail } from 'lucide-vue-next'
+import { Facebook, Linkedin, X, MapPin, Phone, Mail } from 'lucide-vue-next'
+import Logo from '@/components/Logo.vue'
 
 const quickLinks = [
   { name: 'Home', href: '#home' },
@@ -25,10 +26,9 @@ const areas = [
 ]
 
 const socials = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Youtube, href: '#', label: 'YouTube' },
+  { icon: Facebook, href: 'https://www.facebook.com/ruby.n.poole', label: 'Facebook' },
+  { icon: X, href: 'https://twitter.com/RubyNWA', label: 'X (Twitter)' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/ruby-poole-90296699', label: 'LinkedIn' },
 ]
 </script>
 
@@ -39,13 +39,7 @@ const socials = [
         <!-- Brand -->
         <div class="lg:col-span-1">
           <a href="#home" class="flex items-center gap-3 mb-5">
-            <div class="w-11 h-11 rounded-xl bg-primary flex items-center justify-center">
-              <span class="text-primary-content font-display text-xl font-semibold">RP</span>
-            </div>
-            <div>
-              <span class="font-display text-xl block leading-tight">Ruby Poole</span>
-              <span class="text-xs text-base-content/60">Real Estate Team</span>
-            </div>
+            <Logo :size="48" />
           </a>
           <p class="text-base-content/60 text-sm leading-relaxed mb-6">
             Your trusted real estate partner in Northwest Arkansas. 11 years of experience helping families find their dream homes.
@@ -104,8 +98,8 @@ const socials = [
         <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-base-content/50">
           <p>&copy; {{ new Date().getFullYear() }} Ruby Poole Team. All rights reserved.</p>
           <div class="flex gap-6">
-            <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+            <RouterLink to="/privacy" class="hover:text-primary transition-colors">Privacy Policy</RouterLink>
+            <RouterLink to="/terms" class="hover:text-primary transition-colors">Terms of Service</RouterLink>
           </div>
         </div>
       </div>

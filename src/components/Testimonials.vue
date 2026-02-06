@@ -4,32 +4,31 @@ import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-vue-next'
 
 const testimonials = [
   {
-    name: 'Sarah & Michael Johnson',
-    location: 'Rogers, AR',
-    rating: 5,
-    text: 'Ruby and her team made our first home buying experience absolutely seamless. They were patient, knowledgeable, and always available to answer our questions.',
-    avatar: 'SJ',
-  },
-  {
-    name: 'David Thompson',
+    name: 'Alex',
     location: 'Bentonville, AR',
     rating: 5,
-    text: 'Sold our home in just 10 days above asking price! The marketing strategy and staging advice were game-changers. Highly recommend the Ruby Poole Team.',
-    avatar: 'DT',
+    text: "Jerry was an incredible partner throughout our entire home-buying process. From day one, he made everything feel smooth and manageable. He connected us with trusted professionals—including a mortgage lender, title company, and inspector—and we actually ended up using his recommendations.",
+    avatar: 'AL',
+    date: 'Dec 2025',
+    agent: 'Jerry Beaudion'
   },
   {
-    name: 'Emily Rodriguez',
-    location: 'Fayetteville, AR',
+    name: 'Erik Scharberg',
+    location: 'Bentonville, AR',
     rating: 5,
-    text: 'After relocating from Texas, the team helped us find the perfect neighborhood for our family. They really took time to understand what we needed.',
-    avatar: 'ER',
+    text: "Jerry from Ruby Poole has been an absolute pleasure to work with. Personal, non-intrusive service throughout the whole process, from viewings to closing. Very communicative without being pushy at all, which is exactly what we wanted out of our realtor. Would 10/10 recommend.",
+    avatar: 'ES',
+    date: 'Dec 2024',
+    agent: 'Jerry Beaudion'
   },
   {
-    name: 'James & Lisa Chen',
-    location: 'Springdale, AR',
+    name: 'Bella Vista Homebuyer',
+    location: 'Bella Vista, AR',
     rating: 5,
-    text: 'We\'ve worked with Ruby on three property purchases now. Their market knowledge and negotiation skills have saved us thousands. True professionals!',
-    avatar: 'JC',
+    text: "We worked with Heather to buy a home in Bella Vista, AR. She was incredibly professional, quick to respond to any questions we had throughout the process, so helpful in reaching out to inspectors, and contractors in our area when we needed something, always willing to go the extra mile.",
+    avatar: 'BV',
+    date: 'Jan 2026',
+    agent: 'Heather Jorgensen'
   },
 ]
 
@@ -110,7 +109,12 @@ onUnmounted(() => {
                 </div>
                 <div>
                   <div class="font-display text-lg">{{ testimonial.name }}</div>
-                  <div class="text-sm text-base-content/60">{{ testimonial.location }}</div>
+                  <div class="text-sm text-base-content/60">
+                    {{ testimonial.location }} • {{ testimonial.date }}
+                  </div>
+                  <div class="text-xs text-primary font-medium mt-0.5">
+                    Review for {{ testimonial.agent }}
+                  </div>
                 </div>
                 <div class="ml-auto flex gap-0.5">
                   <Star

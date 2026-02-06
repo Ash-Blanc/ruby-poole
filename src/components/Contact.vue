@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { 
   Phone, Mail, MapPin, Clock, Send, 
-  Facebook, Instagram, Linkedin, Youtube 
+  Facebook, Linkedin, X 
 } from 'lucide-vue-next'
 
 const form = ref({
@@ -32,10 +32,9 @@ const contactInfo = [
 ]
 
 const socials = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Youtube, href: '#', label: 'YouTube' },
+  { icon: Facebook, href: 'https://www.facebook.com/ruby.n.poole', label: 'Facebook' },
+  { icon: X, href: 'https://twitter.com/RubyNWA', label: 'X (Twitter)' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/ruby-poole-90296699', label: 'LinkedIn' },
 ]
 </script>
 
