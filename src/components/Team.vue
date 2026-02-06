@@ -105,7 +105,7 @@ const teamMembers = [
   },
 ]
 
-const teamLeader = teamMembers[0]
+const teamLeader = teamMembers[0]!
 </script>
 
 <template>
