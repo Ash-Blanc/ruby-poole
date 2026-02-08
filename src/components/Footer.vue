@@ -1,28 +1,32 @@
 <script setup lang="ts">
-import { Facebook, Linkedin, X, MapPin, Phone, Mail } from 'lucide-vue-next'
+import { Phone, Mail, MapPin, Facebook, Linkedin, X } from 'lucide-vue-next'
 import Logo from '@/components/Logo.vue'
 
+const currentYear = new Date().getFullYear()
+
+const areaLinks = [
+  { name: 'Bentonville', href: '/areas/bentonville' },
+  { name: 'Rogers', href: '/areas/rogers' },
+  { name: 'Bella Vista', href: '/areas/bella-vista' },
+  { name: 'Fayetteville', href: '/areas/fayetteville' },
+  { name: 'Springdale', href: '/areas/springdale' },
+]
+
+const homeLinks = [
+  { name: 'Lake Homes', href: '/homes/lake-homes' },
+  { name: 'Homes with Land', href: '/homes/land' },
+  { name: 'New Construction', href: '/homes/new-construction' },
+  { name: 'Moving to NWA', href: '/moving-to-nwa' },
+]
+
 const quickLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'Our Team', href: '#team' },
-  { name: 'Listings', href: '#listings' },
-  { name: 'Contact', href: '#contact' },
-]
-
-const services = [
-  'Home Buying',
-  'Home Selling',
-  'Investment Properties',
-  'Relocation Services',
-]
-
-const areas = [
-  'Rogers',
-  'Bentonville',
-  'Fayetteville',
-  'Springdale',
-  'Bella Vista',
-  'Centerton',
+  { name: 'Search Homes', href: '/search' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Videos', href: '/videos' },
+  { name: 'Meet the Team', href: '/team' },
+  { name: 'Contact Us', href: '/#contact' },
+  { name: 'Privacy Policy', href: '/privacy' },
+  { name: 'Terms of Service', href: '/terms' },
 ]
 
 const socials = [
@@ -33,59 +37,68 @@ const socials = [
 </script>
 
 <template>
-  <footer class="bg-base-300">
+  <footer class="bg-neutral text-neutral-content">
+    <!-- Main Footer -->
     <div class="container-custom py-16">
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
-        <!-- Brand -->
-        <div class="lg:col-span-1">
-          <a href="#home" class="flex items-center gap-3 mb-5">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
+        <!-- Brand Column -->
+        <div class="sm:col-span-2 lg:col-span-2">
+          <RouterLink to="/" class="inline-flex items-center gap-3 mb-4">
             <Logo :size="48" />
-          </a>
-          <p class="text-base-content/60 text-sm leading-relaxed mb-6">
-            Your trusted real estate partner in Northwest Arkansas. 11 years of experience helping families find their dream homes.
+          </RouterLink>
+          <p class="text-neutral-content/70 mb-6 max-w-sm">
+            The Ruby Poole Team at Collier & Associates — your trusted real estate experts in Northwest Arkansas with 11+ years of experience.
           </p>
-          <div class="flex gap-2">
-            <a
-              v-for="social in socials"
-              :key="social.label"
-              :href="social.href"
-              :aria-label="social.label"
-              class="w-10 h-10 rounded-lg bg-base-100 hover:bg-primary hover:text-primary-content flex items-center justify-center transition-colors"
-            >
-              <component :is="social.icon" class="w-4 h-4" />
+          
+          <!-- Contact Info -->
+          <div class="space-y-3">
+            <a href="tel:+14795550123" class="flex items-center gap-3 hover:text-primary transition-colors">
+              <Phone class="w-4 h-4" />
+              <span>(479) 555-0123</span>
             </a>
+            <a href="mailto:hello@rubypoole.com" class="flex items-center gap-3 hover:text-primary transition-colors">
+              <Mail class="w-4 h-4" />
+              <span>hello@rubypoole.com</span>
+            </a>
+            <div class="flex items-start gap-3">
+              <MapPin class="w-4 h-4 mt-1 flex-shrink-0" />
+              <span>123 Main Street<br>Rogers, AR 72756</span>
+            </div>
           </div>
         </div>
 
-        <!-- Quick Links -->
+        <!-- Areas Column -->
         <div>
-          <h4 class="font-display text-lg mb-5">Quick Links</h4>
-          <ul class="space-y-3">
-            <li v-for="link in quickLinks" :key="link.name">
-              <a :href="link.href" class="text-base-content/60 hover:text-primary transition-colors text-sm">
+          <h4 class="font-display text-lg mb-4">Areas</h4>
+          <ul class="space-y-2">
+            <li v-for="link in areaLinks" :key="link.name">
+              <RouterLink :to="link.href" class="text-neutral-content/70 hover:text-primary transition-colors">
                 {{ link.name }}
-              </a>
+              </RouterLink>
             </li>
           </ul>
         </div>
 
-        <!-- Services -->
+        <!-- Homes Column -->
         <div>
-          <h4 class="font-display text-lg mb-5">Services</h4>
-          <ul class="space-y-3">
-            <li v-for="service in services" :key="service">
-              <span class="text-base-content/60 text-sm">{{ service }}</span>
+          <h4 class="font-display text-lg mb-4">Homes</h4>
+          <ul class="space-y-2">
+            <li v-for="link in homeLinks" :key="link.name">
+              <RouterLink :to="link.href" class="text-neutral-content/70 hover:text-primary transition-colors">
+                {{ link.name }}
+              </RouterLink>
             </li>
           </ul>
         </div>
 
-        <!-- Areas Served -->
+        <!-- Quick Links Column -->
         <div>
-          <h4 class="font-display text-lg mb-5">Areas We Serve</h4>
-          <ul class="grid grid-cols-2 gap-3">
-            <li v-for="area in areas" :key="area" class="flex items-center gap-2">
-              <MapPin class="w-3.5 h-3.5 text-primary" />
-              <span class="text-base-content/60 text-sm">{{ area }}</span>
+          <h4 class="font-display text-lg mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li v-for="link in quickLinks" :key="link.name">
+              <RouterLink :to="link.href" class="text-neutral-content/70 hover:text-primary transition-colors">
+                {{ link.name }}
+              </RouterLink>
             </li>
           </ul>
         </div>
@@ -93,13 +106,26 @@ const socials = [
     </div>
 
     <!-- Bottom Bar -->
-    <div class="border-t border-base-content/10">
+    <div class="border-t border-neutral-content/10">
       <div class="container-custom py-6">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-base-content/50">
-          <p>&copy; {{ new Date().getFullYear() }} Ruby Poole Team. All rights reserved.</p>
-          <div class="flex gap-6">
-            <RouterLink to="/privacy" class="hover:text-primary transition-colors">Privacy Policy</RouterLink>
-            <RouterLink to="/terms" class="hover:text-primary transition-colors">Terms of Service</RouterLink>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-sm text-neutral-content/60 text-center sm:text-left">
+            &copy; {{ currentYear }} Ruby Poole Team at Collier & Associates. All rights reserved.
+          </p>
+          
+          <!-- Social Links -->
+          <div class="flex gap-3">
+            <a
+              v-for="social in socials"
+              :key="social.label"
+              :href="social.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              :aria-label="social.label"
+              class="w-10 h-10 rounded-lg bg-neutral-content/10 hover:bg-primary hover:text-primary-content flex items-center justify-center transition-colors"
+            >
+              <component :is="social.icon" class="w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>

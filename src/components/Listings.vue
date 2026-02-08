@@ -129,14 +129,18 @@ const stats = {
         </article>
       </div>
 
-      <div class="text-center mt-12">
+      <div class="flex flex-wrap justify-center gap-4 mt-12">
+        <RouterLink to="/search" class="btn btn-primary btn-lg gap-2">
+          Browse All NWA Homes
+          <ArrowRight class="w-5 h-5" />
+        </RouterLink>
         <a 
           href="https://www.zillow.com/profile/RubyPoole1" 
           target="_blank"
           rel="noopener noreferrer"
-          class="btn btn-primary btn-lg gap-2"
+          class="btn btn-outline btn-lg gap-2"
         >
-          View All Listings on Zillow
+          View on Zillow
           <ExternalLink class="w-5 h-5" />
         </a>
       </div>

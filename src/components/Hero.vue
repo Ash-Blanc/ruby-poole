@@ -1,6 +1,11 @@
 <script setup lang="ts">
-import { Star, MapPin, Phone, ArrowRight, Award, CheckCircle2 } from 'lucide-vue-next'
+import { Star, MapPin, Phone, ArrowRight, Award, CheckCircle2, Bell, Home, Search } from 'lucide-vue-next'
+import { ref } from 'vue'
 import Logo from '@/components/Logo.vue'
+import LeadForm from '@/components/LeadForm.vue'
+import HomeAlertModal from '@/components/HomeAlertModal.vue'
+
+const showAlertModal = ref(false)
 </script>
 
 <template>
@@ -13,7 +18,7 @@ import Logo from '@/components/Logo.vue'
     </div>
 
     <div class="container-custom relative">
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <!-- Content Column -->
         <div class="text-center lg:text-left">
           <div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-8">
@@ -23,21 +28,30 @@ import Logo from '@/components/Logo.vue'
 
           <h1 class="text-base-content mb-6">
             Your Dream Home
-            <span class="text-primary block mt-1">Awaits in Arkansas</span>
+            <span class="text-primary block mt-1">Awaits in Northwest Arkansas</span>
           </h1>
 
-          <p class="text-lg md:text-xl text-base-content/70 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+          <p class="text-lg md:text-xl text-base-content/70 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
             11 years of experience, 1,274+ homes sold. Let the Ruby Poole Team at Collier &amp; Associates guide you through your real estate journey.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-            <a href="#listings" class="btn btn-primary btn-lg gap-2 px-8">
-              View Listings
-              <ArrowRight class="w-5 h-5" />
-            </a>
+          <!-- PPC CTAs - Primary Actions -->
+          <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-6">
+            <RouterLink to="/search" class="btn btn-primary btn-lg gap-2 px-8">
+              <Search class="w-5 h-5" />
+              Explore Homes
+            </RouterLink>
+            <button @click="showAlertModal = true" class="btn btn-secondary btn-lg gap-2 px-8">
+              <Bell class="w-5 h-5" />
+              Get Home Alerts
+            </button>
+          </div>
+          
+          <!-- Secondary CTA -->
+          <div class="flex justify-center lg:justify-start mb-10">
             <a href="#contact" class="btn btn-outline btn-lg gap-2 px-8">
               <Phone class="w-5 h-5" />
-              Contact the Team
+              Talk to a Local Expert
             </a>
           </div>
 
@@ -54,33 +68,28 @@ import Logo from '@/components/Logo.vue'
           </div>
         </div>
 
-        <!-- Agent Card Column -->
+        <!-- Lead Form Column -->
         <div class="flex justify-center lg:justify-end">
           <div class="glass-card rounded-2xl p-8 max-w-md w-full">
-            <!-- Agent Photo Placeholder -->
-            <div class="w-32 h-32 mx-auto mb-6 flex items-center justify-center">
-              <Logo :size="128" />
-            </div>
-
+            <!-- Quick Form Header -->
             <div class="text-center mb-6">
-              <h3 class="text-2xl font-display mb-1">Ruby Poole Team</h3>
-              <p class="text-base-content/60 mb-4">at Collier &amp; Associates</p>
-              
-              <!-- Rating -->
-              <div class="flex justify-center items-center gap-1 mb-4">
-                <Star v-for="i in 5" :key="i" class="w-5 h-5 text-warning fill-warning" />
-                <span class="ml-2 text-sm text-base-content/70">35 Reviews</span>
+              <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <Logo :size="64" />
               </div>
-
-              <!-- Location -->
-              <div class="flex items-center justify-center gap-2 text-base-content/60">
-                <MapPin class="w-4 h-4" />
-                <span>Rogers, AR &amp; Surrounding Areas</span>
-              </div>
+              <h3 class="text-xl font-display mb-1">Start Your Home Search</h3>
+              <p class="text-sm text-base-content/60">Get personalized listings in your inbox</p>
             </div>
+
+            <!-- Lead Form -->
+            <LeadForm 
+              source="homepage-hero"
+              variant="default"
+              submit-label="Get Started"
+              :success-redirect="true"
+            />
 
             <!-- Stats Grid -->
-            <div class="grid grid-cols-3 gap-4 pt-6 border-t border-base-300">
+            <div class="grid grid-cols-3 gap-4 pt-6 mt-6 border-t border-base-300">
               <div class="text-center">
                 <div class="text-2xl font-display text-primary">11</div>
                 <div class="text-xs text-base-content/60 mt-1">Years Exp</div>
@@ -99,4 +108,7 @@ import Logo from '@/components/Logo.vue'
       </div>
     </div>
   </section>
+
+  <!-- Home Alert Modal -->
+  <HomeAlertModal v-model="showAlertModal" />
 </template>
