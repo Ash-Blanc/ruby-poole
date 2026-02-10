@@ -7,7 +7,7 @@ const areas = [
     tagline: 'HQ of Innovation',
     avgPrice: '$425K',
     growth: '+8%',
-    href: '/areas/bentonville',
+    href: '/bentonville',
     image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&q=80'
   },
   { 
@@ -15,7 +15,7 @@ const areas = [
     tagline: 'Lake & Family Life',
     avgPrice: '$380K',
     growth: '+6%',
-    href: '/areas/rogers',
+    href: '/rogers',
     image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&q=80'
   },
   { 
@@ -23,7 +23,7 @@ const areas = [
     tagline: 'Golf & Retirement',
     avgPrice: '$320K',
     growth: '+7%',
-    href: '/areas/bella-vista',
+    href: '/bella-vista',
     image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80'
   },
   { 
@@ -31,7 +31,7 @@ const areas = [
     tagline: 'Arts & University',
     avgPrice: '$395K',
     growth: '+5%',
-    href: '/areas/fayetteville',
+    href: '/fayetteville',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80'
   },
   { 
@@ -39,7 +39,7 @@ const areas = [
     tagline: 'Most Affordable',
     avgPrice: '$295K',
     growth: '+9%',
-    href: '/areas/springdale',
+    href: '/springdale',
     image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&q=80'
   },
 ]

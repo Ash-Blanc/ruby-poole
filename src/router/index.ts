@@ -24,51 +24,89 @@ const router = createRouter({
       meta: { title: 'Search Homes', description: 'Search homes for sale in Northwest Arkansas' },
     },
 
-    // Area Pages
+    // ========================================
+    // City Hubs (SEO + AI Authority)
+    // ========================================
     {
-      path: '/areas/bentonville',
-      name: 'area-bentonville',
+      path: '/bentonville',
+      name: 'city-bentonville',
       component: () => import('../views/areas/AreaBentonville.vue'),
-      meta: { title: 'Bentonville Homes for Sale', description: 'Find your dream home in Bentonville, Arkansas' },
+      meta: { title: 'Bentonville Neighborhoods & Homes', description: 'Explore neighborhoods and homes in Bentonville, Arkansas' },
     },
     {
-      path: '/areas/bella-vista',
-      name: 'area-bella-vista',
+      path: '/bentonville/downtown-bentonville',
+      name: 'neighborhood-downtown-bentonville',
+      component: () => import('../views/areas/DowntownBentonville.vue'),
+      meta: { title: 'Downtown Bentonville Living', description: 'Explore downtown Bentonville — walkable, vibrant, and cultural' },
+    },
+    {
+      path: '/bella-vista',
+      name: 'city-bella-vista',
       component: () => import('../views/areas/AreaBellaVista.vue'),
-      meta: { title: 'Bella Vista Homes for Sale', description: 'Explore homes in Bella Vista, Arkansas' },
+      meta: { title: 'Bella Vista Neighborhoods & Homes', description: 'Explore neighborhoods and homes in Bella Vista, Arkansas' },
     },
     {
-      path: '/areas/rogers',
-      name: 'area-rogers',
+      path: '/centerton',
+      name: 'city-centerton',
+      component: () => import('../views/areas/AreaCenterton.vue'),
+      meta: { title: 'Centerton Neighborhoods & Homes', description: 'Find homes in Centerton, one of NWA\'s fastest-growing cities' },
+    },
+    {
+      path: '/rogers',
+      name: 'city-rogers',
       component: () => import('../views/areas/AreaRogers.vue'),
-      meta: { title: 'Rogers Homes for Sale', description: 'Discover homes in Rogers, Arkansas' },
+      meta: { title: 'Rogers Neighborhoods & Homes', description: 'Discover neighborhoods and homes in Rogers, Arkansas' },
     },
     {
-      path: '/areas/fayetteville',
-      name: 'area-fayetteville',
+      path: '/fayetteville',
+      name: 'city-fayetteville',
       component: () => import('../views/areas/AreaFayetteville.vue'),
-      meta: { title: 'Fayetteville Homes for Sale', description: 'Browse homes in Fayetteville, Arkansas' },
+      meta: { title: 'Fayetteville Neighborhoods & Homes', description: 'Browse neighborhoods and homes in Fayetteville, Arkansas' },
     },
     {
-      path: '/areas/springdale',
-      name: 'area-springdale',
+      path: '/springdale',
+      name: 'city-springdale',
       component: () => import('../views/areas/AreaSpringdale.vue'),
-      meta: { title: 'Springdale Homes for Sale', description: 'Find homes in Springdale, Arkansas' },
+      meta: { title: 'Springdale Neighborhoods & Homes', description: 'Find neighborhoods and homes in Springdale, Arkansas' },
     },
 
-    // Lifestyle / Property Type Pages
-    {
-      path: '/moving-to-nwa',
-      name: 'moving-to-nwa',
-      component: () => import('../views/MovingToNwa.vue'),
-      meta: { title: 'Moving to Northwest Arkansas', description: 'Your complete guide to relocating to NWA' },
-    },
+    // Old /areas/ redirects
+    { path: '/areas/bentonville', redirect: '/bentonville' },
+    { path: '/areas/downtown-bentonville', redirect: '/bentonville/downtown-bentonville' },
+    { path: '/areas/bella-vista', redirect: '/bella-vista' },
+    { path: '/areas/centerton', redirect: '/centerton' },
+    { path: '/areas/rogers', redirect: '/rogers' },
+    { path: '/areas/fayetteville', redirect: '/fayetteville' },
+    { path: '/areas/springdale', redirect: '/springdale' },
+
+    // ========================================
+    // Lifestyle / Property Type Hubs (PPC + SEO)
+    // ========================================
     {
       path: '/homes/lake-homes',
       name: 'lake-homes',
       component: () => import('../views/homes/LakeHomes.vue'),
-      meta: { title: 'Lake Homes in NWA', description: 'Discover lakefront properties in Northwest Arkansas' },
+      meta: { title: 'Lake & Waterfront Homes in NWA', description: 'Discover lakefront and waterfront properties in Northwest Arkansas' },
     },
+    {
+      path: '/homes/new-construction',
+      name: 'new-construction',
+      component: () => import('../views/homes/NewConstruction.vue'),
+      meta: { title: 'New Construction Homes in NWA', description: 'Browse new build homes in Northwest Arkansas' },
+    },
+    {
+      path: '/homes/bike-trails',
+      name: 'bike-trails',
+      component: () => import('../views/homes/BikeTrails.vue'),
+      meta: { title: 'Homes Near Bike Trails in NWA', description: 'Find homes near the NWA trail system and bike-friendly neighborhoods' },
+    },
+    {
+      path: '/homes/condos-townhomes',
+      name: 'condos-townhomes',
+      component: () => import('../views/homes/CondosTownhomes.vue'),
+      meta: { title: 'Condos & Townhomes in NWA', description: 'Find condos and townhomes in Northwest Arkansas' },
+    },
+    // Kept but not in primary nav
     {
       path: '/homes/land',
       name: 'land-homes',
@@ -76,10 +114,69 @@ const router = createRouter({
       meta: { title: 'Homes with Land in NWA', description: 'Find homes with acreage in Northwest Arkansas' },
     },
     {
-      path: '/homes/new-construction',
-      name: 'new-construction',
-      component: () => import('../views/homes/NewConstruction.vue'),
-      meta: { title: 'New Construction Homes in NWA', description: 'Browse new build homes in Northwest Arkansas' },
+      path: '/homes/luxury',
+      name: 'luxury-homes',
+      component: () => import('../views/homes/LuxuryHomes.vue'),
+      meta: { title: 'Luxury Homes in NWA', description: 'Browse luxury properties and estates in Northwest Arkansas' },
+    },
+
+    // ========================================
+    // School Districts
+    // ========================================
+    {
+      path: '/school-districts',
+      name: 'school-districts',
+      component: () => import('../views/SchoolDistrictsHub.vue'),
+      meta: { title: 'School Districts in Northwest Arkansas', description: 'Explore school districts in NWA — Bentonville, Rogers, Springdale, Fayetteville and more' },
+    },
+
+    // ========================================
+    // High-Intent Functional Paths
+    // ========================================
+    {
+      path: '/homes-under-400k',
+      name: 'homes-under-400k',
+      component: () => import('../views/homes/HighIntentPage.vue'),
+      props: { intentType: 'under-400k' },
+      meta: { title: 'Homes Under $400K in NWA', description: 'Find affordable homes under $400,000 in Northwest Arkansas' },
+    },
+    {
+      path: '/one-level-homes',
+      name: 'one-level-homes',
+      component: () => import('../views/homes/HighIntentPage.vue'),
+      props: { intentType: 'one-level' },
+      meta: { title: 'One-Level Homes in NWA', description: 'Browse single-story and ranch-style homes in Northwest Arkansas' },
+    },
+    {
+      path: '/homes-with-acreage',
+      name: 'homes-with-acreage',
+      component: () => import('../views/homes/HighIntentPage.vue'),
+      props: { intentType: 'acreage' },
+      meta: { title: 'Homes with 1+ Acres in NWA', description: 'Find homes with land and acreage in Northwest Arkansas' },
+    },
+    {
+      path: '/homes-3-car-garage',
+      name: 'homes-3-car-garage',
+      component: () => import('../views/homes/HighIntentPage.vue'),
+      props: { intentType: '3-car-garage' },
+      meta: { title: '3+ Car Garage Homes in NWA', description: 'Browse homes with oversized garages in Northwest Arkansas' },
+    },
+    {
+      path: '/homes-with-pool',
+      name: 'homes-with-pool',
+      component: () => import('../views/homes/HighIntentPage.vue'),
+      props: { intentType: 'pool' },
+      meta: { title: 'Homes with a Pool in NWA', description: 'Find homes with swimming pools in Northwest Arkansas' },
+    },
+
+    // ========================================
+    // Content & Resources
+    // ========================================
+    {
+      path: '/moving-to-nwa',
+      name: 'moving-to-nwa',
+      component: () => import('../views/MovingToNwa.vue'),
+      meta: { title: 'Moving to Northwest Arkansas', description: 'Your complete guide to relocating to NWA' },
     },
 
     // Team & Agents
@@ -137,12 +234,20 @@ const router = createRouter({
       path: '/videos',
       name: 'videos',
       component: () => import('../views/VideoView.vue'),
-      meta: { title: 'Video Gallery', description: 'Watch home tours, market updates, and tips from the Ruby Poole Team' },
+      meta: { title: 'Video Gallery', description: 'Watch home tours, market updates, and neighborhood guides' },
+    },
+
+    // City Comparison Pages
+    {
+      path: '/compare/:comparison',
+      name: 'city-comparison',
+      component: () => import('../views/ComparisonPage.vue'),
+      meta: { title: 'City Comparison', description: 'Compare NWA cities side by side' },
     },
 
     // Neighborhood Sub-Pages
     {
-      path: '/areas/:city/neighborhoods/:neighborhood',
+      path: '/:city/neighborhoods/:neighborhood',
       name: 'neighborhood',
       component: () => import('../views/areas/NeighborhoodView.vue'),
       meta: { title: 'Neighborhood Guide', description: 'Explore this neighborhood' },

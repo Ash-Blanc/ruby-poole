@@ -29,7 +29,7 @@ const pageDescription = computed(() =>
   <SeoHead
     :title="pageTitle"
     :description="pageDescription"
-    :canonical="`/areas/${city.toLowerCase().replace(/\s+/g, '-')}`"
+    :canonical="`/${city.toLowerCase().replace(/\s+/g, '-')}`"
   />
 
   <main>

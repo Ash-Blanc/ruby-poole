@@ -36,6 +36,28 @@ const neighborhoodData: Record<string, Record<string, any>> = {
       lifestyle: 'Family-Friendly Suburban',
       image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
     },
+    'park-springs': {
+      name: 'Park Springs',
+      tagline: 'Modern living near trails and parks',
+      description: 'Park Springs is one of Bentonville\'s newest developments, featuring contemporary homes, pocket parks, and direct trail connectivity. Ideal for active families and professionals who want modern amenities with quick access to downtown.',
+      priceRange: '$375K - $650K',
+      homeTypes: ['New Construction', 'Single Family', 'Townhomes'],
+      highlights: ['Trail access', 'Modern homes', 'Near downtown', 'Community amenities'],
+      schools: ['Apple Glen Elementary', 'Lincoln Jr. High', 'Bentonville High'],
+      lifestyle: 'Modern Suburban',
+      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+    },
+    'bella-vista-highlands': {
+      name: 'Bella Vista Highlands',
+      tagline: 'Gated privacy with Bentonville schools',
+      description: 'Bella Vista Highlands is a gated community on the north side of Bentonville offering larger lots, mature trees, and serene surroundings — all within the top-rated Bentonville School District.',
+      priceRange: '$450K - $750K',
+      homeTypes: ['Custom Builds', 'Single Family', 'Estate Homes'],
+      highlights: ['Gated community', 'Larger lots', 'Bentonville schools', 'Mature landscaping'],
+      schools: ['Willowbrook Elementary', 'Bentonville West High'],
+      lifestyle: 'Upscale Suburban',
+      image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80',
+    },
   },
   rogers: {
     'pinnacle-hills': {
@@ -60,6 +82,28 @@ const neighborhoodData: Record<string, Record<string, any>> = {
       lifestyle: 'Historic/Urban',
       image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80',
     },
+    'lake-atalanta': {
+      name: 'Lake Atalanta',
+      tagline: 'Lakeside living with trail access',
+      description: 'The Lake Atalanta area offers a unique combination of lakeside living and trail connectivity in Rogers. The neighborhood surrounds the scenic Lake Atalanta park, with paved trails, fishing, and natural beauty just steps from home.',
+      priceRange: '$300K - $500K',
+      homeTypes: ['Single Family', 'Ranch Style', 'Craftsman'],
+      highlights: ['Lake access', 'Paved trails', 'Parks', 'Close to downtown Rogers'],
+      schools: ['Eastside Elementary', 'Greer Lingle Middle', 'Rogers High'],
+      lifestyle: 'Outdoor/Lakeside',
+      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+    },
+    'pleasant-crossing': {
+      name: 'Pleasant Crossing',
+      tagline: 'New development with modern amenities',
+      description: 'Pleasant Crossing is a growing community in south Rogers featuring new construction homes, planned green spaces, and easy access to I-49. The area is popular with young families seeking modern homes at competitive prices.',
+      priceRange: '$280K - $450K',
+      homeTypes: ['New Construction', 'Single Family'],
+      highlights: ['New builds', 'I-49 access', 'Shopping nearby', 'Growing community'],
+      schools: ['Bonnie Grimes Elementary', 'Lingle Middle', 'Heritage High'],
+      lifestyle: 'Modern Suburban',
+      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
+    },
   },
   'bella-vista': {
     kingswood: {
@@ -73,6 +117,100 @@ const neighborhoodData: Record<string, Record<string, any>> = {
       lifestyle: 'Golf/Retirement',
       image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80',
     },
+    highlands: {
+      name: 'Highlands',
+      tagline: 'Elevated views and serene surroundings',
+      description: 'The Highlands neighborhood in Bella Vista offers elevated homesites with stunning Ozark views. Known for its larger lots, wooded setting, and peaceful atmosphere, it\'s ideal for those seeking privacy and nature.',
+      priceRange: '$280K - $500K',
+      homeTypes: ['Custom Builds', 'Ranch Style', 'Log Homes'],
+      highlights: ['Ozark views', 'Larger lots', 'Wooded setting', 'POA amenities'],
+      schools: ['Cooper Elementary', 'Bella Vista Middle', 'Bentonville West High'],
+      lifestyle: 'Rural/Private',
+      image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&q=80',
+    },
+    branchwood: {
+      name: 'Branchwood',
+      tagline: 'Family-friendly with lake and trail access',
+      description: 'Branchwood is a popular Bella Vista neighborhood offering a blend of established and newer homes near the Back 40 trail system and Bella Vista\'s lakes. Great for families and outdoor enthusiasts.',
+      priceRange: '$250K - $400K',
+      homeTypes: ['Single Family', 'Ranch Style'],
+      highlights: ['Back 40 trail access', 'Near lakes', 'Family-friendly', 'Affordable'],
+      schools: ['Cooper Elementary', 'Bella Vista Middle', 'Bentonville West High'],
+      lifestyle: 'Active/Family',
+      image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80',
+    },
+  },
+  fayetteville: {
+    'downtown-fayetteville': {
+      name: 'Downtown Fayetteville',
+      tagline: 'Walkable arts, dining, and university energy',
+      description: 'Downtown Fayetteville revolves around the iconic Square and its proximity to the University of Arkansas. It offers a vibrant mix of local restaurants, breweries, live music venues, and boutique shopping — all within walking distance.',
+      priceRange: '$300K - $600K',
+      homeTypes: ['Historic Homes', 'Bungalows', 'Condos', 'Lofts'],
+      highlights: ['Walking to the Square', 'U of A proximity', 'Live music scene', 'Local dining'],
+      schools: ['Owl Creek School', 'Ramay Jr. High', 'Fayetteville High'],
+      lifestyle: 'Urban/Arts',
+      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+    },
+    'gulley-park': {
+      name: 'Gulley Park',
+      tagline: 'Established neighborhood with charm and convenience',
+      description: 'The Gulley Park area is one of Fayetteville\'s most beloved neighborhoods, centered around the namesake park. Mature trees, well-maintained sidewalks, and a strong sense of community define this area.',
+      priceRange: '$350K - $650K',
+      homeTypes: ['Single Family', 'Craftsman', 'Mid-Century'],
+      highlights: ['Park access', 'Mature trees', 'Walkable streets', 'Near U of A'],
+      schools: ['Butterfield Elementary', 'Ramay Jr. High', 'Fayetteville High'],
+      lifestyle: 'Established Suburban',
+      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+    },
+  },
+  springdale: {
+    'har-ber-meadows': {
+      name: 'Har-Ber Meadows',
+      tagline: 'Upscale living in Springdale',
+      description: 'Har-Ber Meadows is Springdale\'s premier neighborhood, featuring larger homes, well-manicured landscaping, and proximity to Har-Ber High School — one of the top-rated schools in the district.',
+      priceRange: '$350K - $600K',
+      homeTypes: ['Single Family', 'Custom Builds'],
+      highlights: ['Top-rated school', 'Larger homes', 'Community feel', 'Well-maintained'],
+      schools: ['George Elementary', 'Har-Ber High'],
+      lifestyle: 'Upscale Suburban',
+      image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
+    },
+    'elm-springs': {
+      name: 'Elm Springs',
+      tagline: 'Small-town feel with NWA convenience',
+      description: 'Elm Springs sits on the western edge of Springdale, offering a small-town atmosphere with larger lots and newer construction. It\'s one of NWA\'s most affordable areas for families seeking space.',
+      priceRange: '$220K - $380K',
+      homeTypes: ['New Construction', 'Single Family', 'Homes with Land'],
+      highlights: ['Affordable', 'Larger lots', 'New construction', 'Small-town charm'],
+      schools: ['Elm Springs Elementary', 'Southwest Jr. High', 'Springdale High'],
+      lifestyle: 'Small Town/Affordable',
+      image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80',
+    },
+  },
+  centerton: {
+    copperstone: {
+      name: 'Copperstone',
+      tagline: 'Master-planned community with resort-style amenities',
+      description: 'Copperstone is Centerton\'s flagship master-planned community, featuring a resort-style pool, splash pad, walking trails, and modern homes. It\'s one of the most popular neighborhoods for young families moving to NWA.',
+      priceRange: '$300K - $500K',
+      homeTypes: ['New Construction', 'Single Family'],
+      highlights: ['Resort-style pool', 'Splash pad', 'Walking trails', 'Community events'],
+      schools: ['Centerton-Gamble Elementary', 'Gravette Middle', 'Gravette High'],
+      lifestyle: 'Master-Planned Family',
+      image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&q=80',
+    },
+    'mill-creek': {
+      name: 'Mill Creek',
+      tagline: 'Affordable new construction with room to grow',
+      description: 'Mill Creek is a growing Centerton neighborhood popular with first-time buyers. Featuring competitively priced new construction, community playgrounds, and proximity to shopping, it offers great value in NWA.',
+      priceRange: '$250K - $400K',
+      homeTypes: ['New Construction', 'Single Family'],
+      highlights: ['Affordable', 'New builds', 'Playgrounds', 'Growing area'],
+      schools: ['Centerton-Gamble Elementary', 'Gravette Middle', 'Gravette High'],
+      lifestyle: 'Starter/Growing Family',
+      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+    },
   },
 }
 
@@ -84,7 +222,7 @@ const faqs = computed(() => {
   if (!data.value) return []
   return [
     { question: `What is the average home price in ${data.value.name}?`, answer: `Home prices in ${data.value.name} typically range from ${data.value.priceRange}. Contact us for current listings and market conditions.` },
-    { question: `What schools serve ${data.value.name}?`, answer: `Students in ${data.value.name} are served by ${data.value.schools.join(', ')}. Bentonville School District is consistently ranked among the best in Arkansas.` },
+    { question: `What schools serve ${data.value.name}?`, answer: `Students in ${data.value.name} are served by ${data.value.schools.join(', ')}. Contact us for more details on school boundaries.` },
     { question: `What types of homes are available?`, answer: `${data.value.name} features primarily ${data.value.homeTypes.join(', ')}. The neighborhood is known for its ${data.value.lifestyle.toLowerCase()} atmosphere.` },
   ]
 })
@@ -96,6 +234,7 @@ const cityName = computed(() => {
     'bella-vista': 'Bella Vista',
     fayetteville: 'Fayetteville',
     springdale: 'Springdale',
+    centerton: 'Centerton',
   }
   return names[city] || city
 })
@@ -106,7 +245,7 @@ const cityName = computed(() => {
     <SeoHead
       :title="`${data.name} Homes for Sale`"
       :description="`Explore homes in ${data.name}, ${cityName}. ${data.tagline}. Price range: ${data.priceRange}.`"
-      :canonical="`/areas/${city}/neighborhoods/${neighborhood}`"
+      :canonical="`/${city}/neighborhoods/${neighborhood}`"
     />
 
     <main>
@@ -119,7 +258,7 @@ const cityName = computed(() => {
 
         <div class="container-custom relative z-10 py-16">
           <RouterLink 
-            :to="`/areas/${city}`"
+            :to="`/${city}`"
             class="inline-flex items-center gap-2 text-neutral-content/70 hover:text-primary text-sm mb-6"
           >
             <ArrowLeft class="w-4 h-4" />
@@ -223,7 +362,7 @@ const cityName = computed(() => {
   <div v-else class="min-h-[60vh] flex items-center justify-center">
     <div class="text-center">
       <h1 class="text-2xl font-display mb-4">Neighborhood Not Found</h1>
-      <RouterLink :to="`/areas/${city}`" class="btn btn-primary">Explore {{ cityName }}</RouterLink>
+      <RouterLink :to="`/${city}`" class="btn btn-primary">Explore {{ cityName }}</RouterLink>
     </div>
   </div>
 </template>

@@ -17,9 +17,9 @@ const teamMembers = [
     name: 'Katie Voldeng',
     role: 'Buyer Specialist',
     rating: 5.0,
-    reviews: 8,
-    sales: '12 in 12mo',
-    priceRange: '$200K - $600K',
+    reviews: 17,
+    sales: '6 in 12mo',
+    priceRange: '$113K - $457K',
     image: 'https://photos.zillowstatic.com/fp/5badaacc2e3f92628b921689b0df0980-h_l.jpg',
     profileUrl: 'https://www.zillow.com/profile/katherine91162',
   },
@@ -27,9 +27,9 @@ const teamMembers = [
     name: 'Heather Jorgensen',
     role: 'Listing Specialist',
     rating: 5.0,
-    reviews: 5,
-    sales: '18 in 12mo',
-    priceRange: '$150K - $800K',
+    reviews: 8,
+    sales: '0 in 12mo',
+    priceRange: 'No recent range',
     image: 'https://photos.zillowstatic.com/fp/c62577695a83f9b68475eb2f578f1dd7-h_l.jpg',
     profileUrl: 'https://www.zillow.com/profile/hjorgensen321',
   },
@@ -37,71 +37,41 @@ const teamMembers = [
     name: 'Jerry Beaudion',
     role: 'Investment Advisor',
     rating: 5.0,
-    reviews: 6,
-    sales: '24 in 12mo',
-    priceRange: '$100K - $500K',
+    reviews: 3,
+    sales: '1 in 12mo',
+    priceRange: 'No recent range',
     image: 'https://photos.zillowstatic.com/fp/f280d2081416cfe296631965ee044c65-h_l.jpg',
     profileUrl: 'https://www.zillow.com/profile/Jerry%20Beaudion',
   },
   {
+    name: 'Taylor Crowell',
+    role: 'First-Time Buyers',
+    rating: 5.0,
+    reviews: 2,
+    sales: '4 in 12mo',
+    priceRange: '$325K - $810K',
+    image: 'https://photos.zillowstatic.com/fp/2bd1eabeaa85ee867856798045202b4b-h_l.jpg',
+    profileUrl: 'https://www.zillow.com/profile/TaylorHullCrowell',
+  },
+  {
     name: 'Jeri Johnson',
     role: 'Relocation Specialist',
-    rating: 5.0,
-    reviews: 4,
-    sales: '15 in 12mo',
-    priceRange: '$180K - $450K',
+    rating: 0,
+    reviews: 0,
+    sales: '4 in 12mo',
+    priceRange: '$314K - $595K',
     image: 'https://photos.zillowstatic.com/fp/43aafcb126114b9231222671dee1f88b-h_l.jpg',
     profileUrl: 'https://www.zillow.com/profile/jerijohnson7',
   },
   {
     name: 'Greg Johnson',
     role: 'Commercial Expert',
-    rating: 5.0,
-    reviews: 3,
-    sales: '8 in 12mo',
-    priceRange: '$250K - $1.2M',
+    rating: 0,
+    reviews: 0,
+    sales: '0 in 12mo',
+    priceRange: '$660K',
     image: 'https://photos.zillowstatic.com/fp/83eff06a342b0b9c99d2dfa42664a65e-h_l.jpg',
     profileUrl: 'https://www.zillow.com/profile/johnson%20greg96',
-  },
-  {
-    name: 'Laurie Lecompte',
-    role: 'Client Relations',
-    rating: 5.0,
-    reviews: 4,
-    sales: '10 in 12mo',
-    priceRange: '$120K - $380K',
-    image: 'https://photos.zillowstatic.com/fp/7e55886acc37cd86c0ad9faf94c33194-h_l.jpg',
-    profileUrl: 'https://www.zillow.com/profile/laurielecomterealtor',
-  },
-  {
-    name: 'Steffan Ogle',
-    role: 'Market Analyst',
-    rating: 5.0,
-    reviews: 5,
-    sales: '14 in 12mo',
-    priceRange: '$175K - $550K',
-    image: 'https://photos.zillowstatic.com/fp/24e76530c810287321fea86ea0ce1319-h_l.jpg',
-    profileUrl: 'https://www.zillow.com/profile/steffanogle',
-  },
-  {
-    name: 'Cassie Haley',
-    role: 'New Construction',
-    rating: 5.0,
-    reviews: 6,
-    sales: '16 in 12mo',
-    priceRange: '$225K - $750K',
-    image: 'https://photos.zillowstatic.com/fp/520de08d2e709b983fff9ac642022777-h_l.jpg',
-    profileUrl: 'https://www.zillow.com/profile/thecassiehaley',
-  },
-  {
-    name: 'Taylor Crowell',
-    role: 'First-Time Buyers',
-    rating: 5.0,
-    reviews: 4,
-    sales: '11 in 12mo',
-    priceRange: '$140K - $425K',
-    image: 'https://photos.zillowstatic.com/fp/2bd1eabeaa85ee867856798045202b4b-h_l.jpg',
-    profileUrl: 'https://www.zillow.com/profile/TaylorHullCrowell',
   },
 ]
 
@@ -113,7 +83,7 @@ const teamLeader = teamMembers[0]!
     <div class="container-custom">
       <div class="section-header">
         <h2>Meet the Team</h2>
-        <p>10 dedicated professionals committed to your real estate success</p>
+        <p>7 dedicated professionals committed to your real estate success</p>
       </div>
 
       <!-- Team Leader -->
@@ -191,10 +161,11 @@ const teamLeader = teamMembers[0]!
             <div class="space-y-2 text-sm">
               <div class="flex justify-between">
                 <span class="text-base-content/60">Rating</span>
-                <div class="flex items-center gap-1">
+                <div v-if="member.reviews > 0" class="flex items-center gap-1">
                   <Star class="w-3.5 h-3.5 text-warning fill-warning" />
                   <span>{{ member.rating }} ({{ member.reviews }})</span>
                 </div>
+                <span v-else class="text-base-content/60">No reviews</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-base-content/60">Recent Sales</span>

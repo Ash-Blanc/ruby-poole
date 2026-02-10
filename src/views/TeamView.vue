@@ -9,7 +9,7 @@ const teamMembers = [
     name: 'Ruby Poole',
     title: 'Team Leader & Broker Associate',
     bio: 'With 11+ years of experience and over 1,274 homes sold, Ruby leads the team with passion for helping families find their perfect home in Northwest Arkansas.',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80',
+    image: 'https://photos.zillowstatic.com/fp/96ec58536ba341be15623aa3fe6e0676-h_l.jpg',
     specialties: ['Luxury Homes', 'Relocation', 'First-Time Buyers'],
     rating: 5.0,
     reviews: 35,
@@ -17,40 +17,76 @@ const teamMembers = [
     email: 'ruby@rubypoole.com',
   },
   {
-    slug: 'sarah-johnson',
-    name: 'Sarah Johnson',
-    title: 'Buyers Agent',
-    bio: 'Sarah specializes in helping first-time buyers navigate the home buying process with patience and expertise.',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80',
+    slug: 'katie-voldeng',
+    name: 'Katie Voldeng',
+    title: 'Buyer Specialist',
+    bio: 'Katie brings dedication and market knowledge to help buyers find the right home at the right price throughout Northwest Arkansas.',
+    image: 'https://photos.zillowstatic.com/fp/5badaacc2e3f92628b921689b0df0980-h_l.jpg',
+    specialties: ['Buyer Representation', 'Negotiations'],
+    rating: 5.0,
+    reviews: 17,
+    phone: '(479) 555-0124',
+    email: 'katie@rubypoole.com',
+  },
+  {
+    slug: 'heather-jorgensen',
+    name: 'Heather Jorgensen',
+    title: 'Listing Specialist',
+    bio: 'Heather brings marketing expertise and a keen eye for detail to help sellers showcase and sell their homes effectively.',
+    image: 'https://photos.zillowstatic.com/fp/c62577695a83f9b68475eb2f578f1dd7-h_l.jpg',
+    specialties: ['Listings', 'Marketing'],
+    rating: 5.0,
+    reviews: 8,
+    phone: '(479) 555-0125',
+    email: 'heather@rubypoole.com',
+  },
+  {
+    slug: 'jerry-beaudion',
+    name: 'Jerry Beaudion',
+    title: 'Investment Advisor',
+    bio: 'Jerry specializes in investment properties and helps clients build wealth through strategic real estate opportunities.',
+    image: 'https://photos.zillowstatic.com/fp/f280d2081416cfe296631965ee044c65-h_l.jpg',
+    specialties: ['Investment Properties', 'Land'],
+    rating: 5.0,
+    reviews: 3,
+    phone: '(479) 555-0126',
+    email: 'jerry@rubypoole.com',
+  },
+  {
+    slug: 'taylor-crowell',
+    name: 'Taylor Crowell',
+    title: 'First-Time Buyers Specialist',
+    bio: 'Taylor loves guiding first-time buyers through the process, making the experience smooth and stress-free.',
+    image: 'https://photos.zillowstatic.com/fp/2bd1eabeaa85ee867856798045202b4b-h_l.jpg',
     specialties: ['First-Time Buyers', 'New Construction'],
     rating: 5.0,
-    reviews: 18,
-    phone: '(479) 555-0124',
-    email: 'sarah@rubypoole.com',
+    reviews: 2,
+    phone: '(479) 555-0127',
+    email: 'taylor@rubypoole.com',
   },
   {
-    slug: 'michael-davis',
-    name: 'Michael Davis',
-    title: 'Listing Specialist',
-    bio: 'Michael brings marketing expertise and negotiation skills to help sellers get top dollar for their homes.',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
-    specialties: ['Luxury Listings', 'Investment Properties'],
-    rating: 5.0,
-    reviews: 22,
-    phone: '(479) 555-0125',
-    email: 'michael@rubypoole.com',
+    slug: 'jeri-johnson',
+    name: 'Jeri Johnson',
+    title: 'Relocation Specialist',
+    bio: 'Jeri helps relocating families find their ideal home in Northwest Arkansas with personalized neighborhood guidance.',
+    image: 'https://photos.zillowstatic.com/fp/43aafcb126114b9231222671dee1f88b-h_l.jpg',
+    specialties: ['Relocation', 'Family Homes'],
+    rating: 0,
+    reviews: 0,
+    phone: '(479) 555-0128',
+    email: 'jeri@rubypoole.com',
   },
   {
-    slug: 'emily-chen',
-    name: 'Emily Chen',
-    title: 'Buyers Agent',
-    bio: 'Emily loves connecting families with their dream homes and is known for her attention to detail.',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80',
-    specialties: ['Family Homes', 'School Districts'],
-    rating: 5.0,
-    reviews: 15,
-    phone: '(479) 555-0126',
-    email: 'emily@rubypoole.com',
+    slug: 'greg-johnson',
+    name: 'Greg Johnson',
+    title: 'Commercial Expert',
+    bio: 'Greg brings expertise in commercial and higher-end residential properties, helping clients with complex transactions.',
+    image: 'https://photos.zillowstatic.com/fp/83eff06a342b0b9c99d2dfa42664a65e-h_l.jpg',
+    specialties: ['Commercial', 'Luxury Properties'],
+    rating: 0,
+    reviews: 0,
+    phone: '(479) 555-0129',
+    email: 'greg@rubypoole.com',
   },
 ]
 </script>
@@ -112,10 +148,13 @@ const teamMembers = [
                 
                 <!-- Rating -->
                 <div class="flex items-center gap-2 mb-3">
-                  <div class="flex">
-                    <Star v-for="i in 5" :key="i" class="w-4 h-4 text-warning fill-warning" />
-                  </div>
-                  <span class="text-sm text-base-content/60">{{ member.reviews }} reviews</span>
+                  <template v-if="member.reviews > 0">
+                    <div class="flex">
+                      <Star v-for="i in 5" :key="i" class="w-4 h-4 text-warning fill-warning" />
+                    </div>
+                    <span class="text-sm text-base-content/60">{{ member.reviews }} reviews</span>
+                  </template>
+                  <span v-else class="text-sm text-base-content/60">No reviews yet</span>
                 </div>
                 
                 <!-- Specialties -->

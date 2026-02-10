@@ -1,35 +1,43 @@
 <script setup lang="ts">
-import { Phone, Mail, MapPin, Facebook, Linkedin, X } from 'lucide-vue-next'
+import { Phone, Mail, MapPin, Facebook, Linkedin, X, Instagram, Music2 } from 'lucide-vue-next'
 import Logo from '@/components/Logo.vue'
 
 const currentYear = new Date().getFullYear()
 
 const areaLinks = [
-  { name: 'Bentonville', href: '/areas/bentonville' },
-  { name: 'Rogers', href: '/areas/rogers' },
-  { name: 'Bella Vista', href: '/areas/bella-vista' },
-  { name: 'Fayetteville', href: '/areas/fayetteville' },
-  { name: 'Springdale', href: '/areas/springdale' },
+  { name: 'Downtown Bentonville', href: '/bentonville/downtown-bentonville' },
+  { name: 'Bentonville', href: '/bentonville' },
+  { name: 'Rogers', href: '/rogers' },
+  { name: 'Bella Vista', href: '/bella-vista' },
+  { name: 'Centerton', href: '/centerton' },
+  { name: 'Fayetteville', href: '/fayetteville' },
+  { name: 'Springdale', href: '/springdale' },
 ]
 
 const homeLinks = [
-  { name: 'Lake Homes', href: '/homes/lake-homes' },
-  { name: 'Homes with Land', href: '/homes/land' },
+  { name: 'Lake & Waterfront', href: '/homes/lake-homes' },
   { name: 'New Construction', href: '/homes/new-construction' },
-  { name: 'Moving to NWA', href: '/moving-to-nwa' },
+  { name: 'Homes Near Bike Trails', href: '/homes/bike-trails' },
+  { name: 'Condos & Townhomes', href: '/homes/condos-townhomes' },
+  { name: 'Homes with Land', href: '/homes/land' },
+  { name: 'Luxury Homes', href: '/homes/luxury' },
 ]
 
 const quickLinks = [
   { name: 'Search Homes', href: '/search' },
+  { name: 'School Districts', href: '/school-districts' },
   { name: 'Blog', href: '/blog' },
   { name: 'Videos', href: '/videos' },
   { name: 'Meet the Team', href: '/team' },
+  { name: 'Moving to NWA', href: '/moving-to-nwa' },
   { name: 'Contact Us', href: '/#contact' },
   { name: 'Privacy Policy', href: '/privacy' },
   { name: 'Terms of Service', href: '/terms' },
 ]
 
 const socials = [
+  { icon: Instagram, href: 'https://www.instagram.com/rubypoole_nwa/', label: 'Instagram' },
+  { icon: Music2, href: 'https://www.tiktok.com/@rubypoole_nwa', label: 'TikTok' },
   { icon: Facebook, href: 'https://www.facebook.com/ruby.n.poole', label: 'Facebook' },
   { icon: X, href: 'https://twitter.com/RubyNWA', label: 'X (Twitter)' },
   { icon: Linkedin, href: 'https://www.linkedin.com/in/ruby-poole-90296699', label: 'LinkedIn' },
@@ -44,10 +52,14 @@ const socials = [
         <!-- Brand Column -->
         <div class="sm:col-span-2 lg:col-span-2">
           <RouterLink to="/" class="inline-flex items-center gap-3 mb-4">
-            <Logo :size="48" />
+            <Logo :size="40" variant="full" />
           </RouterLink>
-          <p class="text-neutral-content/70 mb-6 max-w-sm">
-            The Ruby Poole Team at Collier & Associates — your trusted real estate experts in Northwest Arkansas with 11+ years of experience.
+          <p class="text-neutral-content/70 mb-3 max-w-sm text-sm">
+            Your neighborhood-first guide to living in Northwest Arkansas. Explore communities, 
+            homes, school districts, and local insight.
+          </p>
+          <p class="text-neutral-content/50 mb-6 max-w-sm text-xs">
+            Real estate services provided by The Ruby Poole Team at Collier &amp; Associates.
           </p>
           
           <!-- Contact Info -->
@@ -56,9 +68,9 @@ const socials = [
               <Phone class="w-4 h-4" />
               <span>(479) 555-0123</span>
             </a>
-            <a href="mailto:hello@rubypoole.com" class="flex items-center gap-3 hover:text-primary transition-colors">
+            <a href="mailto:hello@nwaneighborhoods.com" class="flex items-center gap-3 hover:text-primary transition-colors">
               <Mail class="w-4 h-4" />
-              <span>hello@rubypoole.com</span>
+              <span>hello@nwaneighborhoods.com</span>
             </a>
             <div class="flex items-start gap-3">
               <MapPin class="w-4 h-4 mt-1 flex-shrink-0" />
@@ -72,7 +84,7 @@ const socials = [
           <h4 class="font-display text-lg mb-4">Areas</h4>
           <ul class="space-y-2">
             <li v-for="link in areaLinks" :key="link.name">
-              <RouterLink :to="link.href" class="text-neutral-content/70 hover:text-primary transition-colors">
+              <RouterLink :to="link.href" class="text-neutral-content/70 hover:text-primary transition-colors text-sm">
                 {{ link.name }}
               </RouterLink>
             </li>
@@ -81,10 +93,10 @@ const socials = [
 
         <!-- Homes Column -->
         <div>
-          <h4 class="font-display text-lg mb-4">Homes</h4>
+          <h4 class="font-display text-lg mb-4">Lifestyles</h4>
           <ul class="space-y-2">
             <li v-for="link in homeLinks" :key="link.name">
-              <RouterLink :to="link.href" class="text-neutral-content/70 hover:text-primary transition-colors">
+              <RouterLink :to="link.href" class="text-neutral-content/70 hover:text-primary transition-colors text-sm">
                 {{ link.name }}
               </RouterLink>
             </li>
@@ -96,7 +108,7 @@ const socials = [
           <h4 class="font-display text-lg mb-4">Quick Links</h4>
           <ul class="space-y-2">
             <li v-for="link in quickLinks" :key="link.name">
-              <RouterLink :to="link.href" class="text-neutral-content/70 hover:text-primary transition-colors">
+              <RouterLink :to="link.href" class="text-neutral-content/70 hover:text-primary transition-colors text-sm">
                 {{ link.name }}
               </RouterLink>
             </li>
@@ -110,7 +122,7 @@ const socials = [
       <div class="container-custom py-6">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p class="text-sm text-neutral-content/60 text-center sm:text-left">
-            &copy; {{ currentYear }} Ruby Poole Team at Collier & Associates. All rights reserved.
+            &copy; {{ currentYear }} NWA Neighborhoods by The Ruby Poole Team. All rights reserved.
           </p>
           
           <!-- Social Links -->

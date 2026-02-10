@@ -13,11 +13,11 @@ const benefits = [
 ]
 
 const cities = [
-  { name: 'Bentonville', tagline: 'Business hub with world-class culture', link: '/areas/bentonville' },
-  { name: 'Rogers', tagline: 'Family-friendly with lake access', link: '/areas/rogers' },
-  { name: 'Bella Vista', tagline: 'Lakefront retirement paradise', link: '/areas/bella-vista' },
-  { name: 'Fayetteville', tagline: 'College town energy and arts', link: '/areas/fayetteville' },
-  { name: 'Springdale', tagline: 'Most affordable option', link: '/areas/springdale' },
+  { name: 'Bentonville', tagline: 'Business hub with world-class culture', link: '/bentonville' },
+  { name: 'Rogers', tagline: 'Family-friendly with lake access', link: '/rogers' },
+  { name: 'Bella Vista', tagline: 'Lakefront retirement paradise', link: '/bella-vista' },
+  { name: 'Fayetteville', tagline: 'College town energy and arts', link: '/fayetteville' },
+  { name: 'Springdale', tagline: 'Most affordable option', link: '/springdale' },
 ]
 
 const faqs = [

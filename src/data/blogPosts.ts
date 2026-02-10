@@ -319,6 +319,184 @@ All three districts offer excellent education. Visit campuses and talk to famili
     image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80',
     tags: ['schools', 'education', 'families'],
   },
+  {
+    slug: 'best-neighborhoods-families-nwa',
+    title: 'The Best Neighborhoods for Families in Northwest Arkansas (2025)',
+    excerpt: 'A neighborhood-by-neighborhood breakdown of the best places to raise kids in NWA, from Bentonville to Springdale.',
+    content: `
+Looking for the perfect family-friendly neighborhood in NWA? Here's our top picks based on schools, parks, safety, and community feel.
+
+## Bentonville
+
+**Sugar Creek** — Top-rated elementary schools, community pool, sports fields, and a strong neighborhood association. Price range: $350K–$600K.
+
+**Park Springs** — Newer development with modern homes, trail connectivity, and pocket parks. Great for active families. Price range: $375K–$650K.
+
+## Rogers
+
+**Pleasant Crossing** — Affordable new construction, planned green spaces, and growing community feel. Price range: $280K–$450K.
+
+**Lake Atalanta** — Lakeside living with paved trails and excellent parks. Close to downtown Rogers. Price range: $300K–$500K.
+
+## Bella Vista
+
+**Branchwood** — Access to the Back 40 trail system and seven lakes. Established neighborhood with affordable homes. Price range: $250K–$400K.
+
+## Centerton
+
+**Copperstone** — Master-planned community with resort-style pool, splash pad, walking trails, and community events. Price range: $300K–$500K.
+
+## Springdale
+
+**Har-Ber Meadows** — Springdale's premier neighborhood near top-rated Har-Ber High School. Larger homes with great community feel. Price range: $350K–$600K.
+
+## How to Choose
+
+1. Visit neighborhoods during school drop-off/pick-up times
+2. Check school district boundaries (they can split neighborhoods)
+3. Talk to current residents about community events
+4. Consider your commute — 10 minutes makes a difference in NWA
+    `,
+    date: '2025-01-15',
+    author: 'Ruby Poole',
+    category: 'Neighborhoods',
+    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
+    featured: true,
+    tags: ['neighborhoods', 'families', 'schools', 'best-of'],
+  },
+  {
+    slug: 'bentonville-vs-rogers-homebuyers',
+    title: 'Bentonville vs Rogers: Which NWA City Should You Choose?',
+    excerpt: 'A detailed comparison of two popular NWA cities covering home prices, schools, amenities, and lifestyle differences.',
+    content: `
+Bentonville and Rogers are neighbors, but they offer different lifestyles. Here's how to decide which one is right for you.
+
+## Home Prices
+
+**Bentonville**: Median $425K. Higher prices, especially downtown and in newer developments.
+
+**Rogers**: Median $350K. More affordable options, especially in established neighborhoods. Better value per square foot.
+
+## Schools
+
+Both districts are excellent. Bentonville ranks slightly higher statewide, but Rogers has strong programs and facilities. Both have graduation rates above 90%.
+
+## Amenities
+
+**Bentonville wins for**: Crystal Bridges Museum, downtown square walkability, trail system, food scene.
+
+**Rogers wins for**: Beaver Lake access, Pinnacle Hills shopping, War Eagle Mill, more affordable entertainment options.
+
+## Job Market
+
+Both cities benefit from the NWA economy. Bentonville has a slight edge with Walmart HQ, but Rogers' central location makes commuting to any NWA employer easy.
+
+## The Verdict
+
+Choose Bentonville if you value walkability, culture, and top-rated schools and don't mind paying a premium. Choose Rogers for lake access, value, and a central location. Either way, you can't go wrong — they're only 10 minutes apart.
+
+[Compare these cities side by side →](/compare/bentonville-vs-rogers)
+    `,
+    date: '2025-01-10',
+    author: 'Ruby Poole',
+    category: 'Neighborhoods',
+    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
+    tags: ['bentonville', 'rogers', 'comparison', 'neighborhoods'],
+  },
+  {
+    slug: 'hidden-gem-neighborhoods-nwa',
+    title: '5 Hidden-Gem Neighborhoods in NWA That Buyers are Overlooking',
+    excerpt: 'These under-the-radar NWA neighborhoods offer great value, strong schools, and room to grow before prices catch up.',
+    content: `
+Everyone knows about downtown Bentonville and Pinnacle Hills. But these five neighborhoods fly under the radar — for now.
+
+## 1. Elm Springs (Springdale)
+
+**Why it's a gem**: Small-town feel with NWA convenience. Larger lots, new construction, and prices that start in the $220Ks. Just 15 minutes to Bentonville.
+
+**Best for**: First-time buyers, families wanting space, and anyone seeking value.
+
+## 2. Lake Atalanta (Rogers)
+
+**Why it's a gem**: Lakeside living, paved trails, and parks — all within minutes of downtown Rogers and I-49. Prices are $100K+ less than comparable Bentonville neighborhoods.
+
+**Best for**: Outdoor enthusiasts, active families, and commuters.
+
+## 3. Branchwood (Bella Vista)
+
+**Why it's a gem**: Direct access to the Back 40 trail system, near Bella Vista's seven lakes, and homes starting in the $250Ks. All within the Bentonville School District.
+
+**Best for**: Trail riders, lake lovers, and budget-conscious families.
+
+## 4. Mill Creek (Centerton)
+
+**Why it's a gem**: Affordable new construction in the Bentonville School District. Centerton's +11% appreciation rate means your equity will grow fast.
+
+**Best for**: First-time buyers and families prioritizing new homes and great schools.
+
+## 5. Gulley Park (Fayetteville)
+
+**Why it's a gem**: One of Fayetteville's most charming established neighborhoods with mature trees, walkable streets, and homes with character. Near the University of Arkansas.
+
+**Best for**: Professionals seeking character homes, U of A employees, and arts lovers.
+
+## Act Now
+
+These neighborhoods won't stay under the radar forever. NWA's growth is spreading, and today's hidden gems are tomorrow's hot spots.
+    `,
+    date: '2025-01-05',
+    author: 'Ruby Poole',
+    category: 'Neighborhoods',
+    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
+    featured: true,
+    tags: ['neighborhoods', 'hidden-gems', 'value', 'investment'],
+  },
+  {
+    slug: 'nwa-relocation-cost-breakdown',
+    title: 'What Does It Actually Cost to Relocate to NWA? A Complete Breakdown',
+    excerpt: 'From moving costs to closing costs to your first utility bill — here is what to budget for your NWA move.',
+    content: `
+Planning to relocate to Northwest Arkansas? Here's a realistic breakdown of what it costs so you can budget properly.
+
+## Moving Costs
+
+- **Cross-country move (1,000+ miles)**: $4,000–$10,000
+- **Regional move (under 500 miles)**: $2,000–$5,000
+- **Storage (if needed)**: $100–$300/month
+
+## Home Buying Costs
+
+- **Down payment**: 3.5%–20% of purchase price
+- **Closing costs**: 2%–3% of purchase price
+- **Home inspection**: $300–$500
+- **Appraisal**: $400–$600
+
+## Monthly Costs by City
+
+**Bentonville** — Mortgage $2,200 / Tax $180 / Insurance $120 / Utilities $200 = ~$2,700/mo
+
+**Rogers** — Mortgage $1,900 / Tax $170 / Insurance $115 / Utilities $190 = ~$2,375/mo
+
+**Springdale** — Mortgage $1,600 / Tax $155 / Insurance $110 / Utilities $185 = ~$2,050/mo
+
+## Cost of Living Comparison
+
+NWA is 5-15% cheaper than the national average. Compared to major metros:
+
+- **40% cheaper** than Austin, TX
+- **50% cheaper** than Denver, CO
+- **60% cheaper** than San Francisco, CA
+
+## Pro Tip
+
+Many employers in NWA offer relocation packages. Ask about it — Walmart, Tyson, and J.B. Hunt all have relocation assistance programs.
+    `,
+    date: '2025-01-20',
+    author: 'Sarah Johnson',
+    category: 'Relocation',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
+    tags: ['relocation', 'costs', 'budget', 'moving'],
+  },
 ]
 
 export const getPostBySlug = (slug: string): BlogPost | undefined => {

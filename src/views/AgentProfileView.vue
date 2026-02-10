@@ -162,7 +162,7 @@ const agent = computed(() => teamMembers[slug] || null)
                 <RouterLink 
                   v-for="area in agent.areas" 
                   :key="area" 
-                  :to="`/areas/${area.toLowerCase().replace(' ', '-')}`"
+                  :to="`/${area.toLowerCase().replace(' ', '-')}`"
                   class="flex items-center gap-1 badge badge-ghost py-3 px-4 hover:badge-primary transition-colors"
                 >
                   <MapPin class="w-3 h-3" />

@@ -7,11 +7,11 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {})
 
 const baseData = {
-  name: 'Ruby Poole Team',
-  description: 'Top-rated real estate team in Northwest Arkansas with 11 years of experience and 1,274+ homes sold.',
-  url: 'https://rubypoole.com',
+  name: 'NWA Neighborhoods by The Ruby Poole Team',
+  description: 'Your neighborhood-first guide to living in Northwest Arkansas. Explore communities, homes, school districts & local insight.',
+  url: 'https://nwaneighborhoods.com',
   telephone: '+1-479-555-0123',
-  email: 'hello@rubypoole.com',
+  email: 'hello@nwaneighborhoods.com',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '123 Main Street',

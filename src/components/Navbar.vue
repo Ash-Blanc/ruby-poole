@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Home, Users, Building2, Phone, Menu, X, ChevronDown, MapPin, TreePine, Waves, Hammer, PlaneTakeoff, Search, BookOpen, Video } from 'lucide-vue-next'
+import { Home, Users, MapPin, Phone, Menu, X, ChevronDown, Waves, Hammer, Search, BookOpen, Video, Building, Bike, GraduationCap, PlaneTakeoff } from 'lucide-vue-next'
 import Logo from '@/components/Logo.vue'
 
 const isMenuOpen = ref(false)
@@ -22,32 +22,36 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { name: 'Home', href: '/', icon: Home },
   { 
-    name: 'Areas', 
+    name: 'Neighborhoods', 
     icon: MapPin,
     dropdown: [
-      { name: 'Bentonville', href: '/areas/bentonville' },
-      { name: 'Rogers', href: '/areas/rogers' },
-      { name: 'Bella Vista', href: '/areas/bella-vista' },
-      { name: 'Fayetteville', href: '/areas/fayetteville' },
-      { name: 'Springdale', href: '/areas/springdale' },
+      { name: 'Bentonville', href: '/bentonville', icon: MapPin },
+      { name: 'Downtown Bentonville', href: '/bentonville/downtown-bentonville', icon: MapPin },
+      { name: 'Bella Vista', href: '/bella-vista', icon: MapPin },
+      { name: 'Rogers', href: '/rogers', icon: MapPin },
+      { name: 'Springdale', href: '/springdale', icon: MapPin },
+      { name: 'Fayetteville', href: '/fayetteville', icon: MapPin },
+      { name: 'Centerton', href: '/centerton', icon: MapPin },
     ]
   },
   { 
-    name: 'Homes', 
-    icon: Building2,
+    name: 'Lifestyles', 
+    icon: Building,
     dropdown: [
-      { name: 'Lake Homes', href: '/homes/lake-homes', icon: Waves },
-      { name: 'Homes with Land', href: '/homes/land', icon: TreePine },
+      { name: 'Lake & Waterfront', href: '/homes/lake-homes', icon: Waves },
       { name: 'New Construction', href: '/homes/new-construction', icon: Hammer },
-      { name: 'Moving to NWA', href: '/moving-to-nwa', icon: PlaneTakeoff },
+      { name: 'Homes Near Bike Trails', href: '/homes/bike-trails', icon: Bike },
+      { name: 'Condos & Townhomes', href: '/homes/condos-townhomes', icon: Building },
     ]
   },
   { 
     name: 'Resources', 
     icon: BookOpen,
     dropdown: [
+      { name: 'School Districts', href: '/school-districts', icon: GraduationCap },
       { name: 'Blog', href: '/blog', icon: BookOpen },
       { name: 'Videos', href: '/videos', icon: Video },
+      { name: 'Moving to NWA', href: '/moving-to-nwa', icon: PlaneTakeoff },
     ]
   },
   { name: 'Team', href: '/team', icon: Users },
@@ -70,7 +74,7 @@ const closeDropdowns = () => {
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center gap-3 group" @click="closeDropdowns">
-          <Logo :size="48" />
+          <Logo :size="40" variant="full" />
         </RouterLink>
 
         <!-- Desktop Navigation -->

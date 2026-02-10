@@ -1,67 +1,72 @@
 <script setup lang="ts">
-import { Star, ArrowRight, Users } from 'lucide-vue-next'
+import { Award, TrendingUp, Users, ArrowRight, MapPin } from 'lucide-vue-next'
 
-const teamLeader = {
-  name: 'Ruby Poole',
-  role: 'Team Leader',
-  rating: 5.0,
-  reviews: 35,
-  sales: '160 in 12mo',
-  image: 'https://photos.zillowstatic.com/fp/96ec58536ba341be15623aa3fe6e0676-h_l.jpg',
-}
-
-const teamHighlights = [
-  { name: 'Katie Voldeng', role: 'Buyer Specialist', image: 'https://photos.zillowstatic.com/fp/5badaacc2e3f92628b921689b0df0980-h_l.jpg' },
-  { name: 'Heather Jorgensen', role: 'Listing Specialist', image: 'https://photos.zillowstatic.com/fp/c62577695a83f9b68475eb2f578f1dd7-h_l.jpg' },
-  { name: 'Jerry Beaudion', role: 'Investment Advisor', image: 'https://photos.zillowstatic.com/fp/f280d2081416cfe296631965ee044c65-h_l.jpg' },
+const stats = [
+  { value: '11+', label: 'Years Experience', icon: Award },
+  { value: '1,274+', label: 'Homes Sold', icon: TrendingUp },
+  { value: '7', label: 'Team Members', icon: Users },
 ]
 </script>
 
 <template>
-  <section class="py-20 bg-base-200/50">
+  <section class="py-16">
     <div class="container-custom">
-      <div class="section-header">
-        <h2>Meet the Team</h2>
-        <p>10 dedicated professionals committed to your success</p>
-      </div>
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Content -->
+        <div>
+          <div class="inline-flex items-center gap-2 text-primary text-sm font-medium mb-4">
+            <MapPin class="w-4 h-4" />
+            <span>Northwest Arkansas</span>
+          </div>
+          
+          <h2 class="text-3xl md:text-4xl font-display mb-4">
+            Real Estate Services by
+            <span class="text-primary">The Ruby Poole Team</span>
+          </h2>
+          
+          <p class="text-base-content/70 mb-6 leading-relaxed">
+            NWA Neighborhoods is powered by The Ruby Poole Team at Collier &amp; Associates — your trusted real estate experts in Northwest Arkansas. 
+            With deep roots in the community and 11+ years of local expertise, we help families find their perfect neighborhood in NWA.
+          </p>
+          
+          <p class="text-base-content/60 mb-8 text-sm leading-relaxed">
+            Whether you're relocating to NWA, upgrading your home, or looking for land and lake properties — 
+            our team provides full-service, personalized guidance from search to close.
+          </p>
 
-      <div class="grid lg:grid-cols-2 gap-8 items-center">
-        <!-- Team Leader -->
-        <div class="card bg-base-100 lg:card-side overflow-hidden">
-          <figure class="lg:w-48 bg-base-200">
-            <img :src="teamLeader.image" :alt="teamLeader.name" class="w-full h-full object-cover" />
-          </figure>
-          <div class="card-body p-6">
-            <div class="badge badge-primary mb-2">Team Leader</div>
-            <h3 class="text-2xl font-display">{{ teamLeader.name }}</h3>
-            <p class="text-base-content/60 text-sm mb-3">at Collier & Associates</p>
-            <div class="flex items-center gap-4 text-sm">
-              <div class="flex items-center gap-1">
-                <Star class="w-4 h-4 text-warning fill-warning" />
-                <span>{{ teamLeader.rating }} ({{ teamLeader.reviews }} reviews)</span>
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-6 mb-8">
+            <div v-for="stat in stats" :key="stat.label" class="text-center">
+              <div class="w-12 h-12 mx-auto mb-3 rounded-xl bg-primary/10 flex items-center justify-center">
+                <component :is="stat.icon" class="w-6 h-6 text-primary" />
               </div>
-              <span>{{ teamLeader.sales }}</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Team Highlights -->
-        <div class="space-y-4">
-          <div v-for="member in teamHighlights" :key="member.name" class="flex items-center gap-4 p-4 bg-base-100 rounded-xl">
-            <div class="w-12 h-12 rounded-full overflow-hidden ring-2 ring-base-300">
-              <img :src="member.image" :alt="member.name" class="w-full h-full object-cover" />
-            </div>
-            <div>
-              <h4 class="font-medium">{{ member.name }}</h4>
-              <p class="text-sm text-base-content/60">{{ member.role }}</p>
+              <div class="text-2xl font-display text-base-content">{{ stat.value }}</div>
+              <div class="text-xs text-base-content/60 mt-1">{{ stat.label }}</div>
             </div>
           </div>
 
-          <RouterLink to="/team" class="btn btn-primary w-full gap-2">
-            <Users class="w-4 h-4" />
-            Meet Our Full Team
+          <RouterLink to="/team" class="btn btn-outline gap-2">
+            Meet the Full Team
             <ArrowRight class="w-4 h-4" />
           </RouterLink>
+        </div>
+
+        <!-- Image/Visual -->
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+            <img 
+              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
+              alt="The Ruby Poole Team"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <!-- Decorative badge -->
+          <div class="absolute -bottom-4 -left-4 bg-primary text-primary-content rounded-xl p-4 shadow-lg">
+            <div class="text-2xl font-display">5.0</div>
+            <div class="text-xs">★★★★★</div>
+            <div class="text-xs opacity-80 mt-0.5">35 Reviews</div>
+          </div>
         </div>
       </div>
     </div>
