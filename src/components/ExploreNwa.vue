@@ -45,13 +45,13 @@ const featureCards: FeatureCard[] = [
     image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80',
     size: 'lg',
   },
-  {
+  /* {
     title: 'Condos & Townhomes',
     subtitle: 'Low-maintenance living',
     href: '/homes/condos-townhomes',
     image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
     size: 'lg',
-  },
+  }, */
 ]
 
 const cityCards: FeatureCard[] = [
@@ -112,12 +112,12 @@ const cityCards: FeatureCard[] = [
       </div>
 
       <!-- Priority Feature Cards - Large Tiles -->
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+      <div class="flex flex-wrap justify-center gap-5 mb-8">
         <RouterLink
           v-for="card in featureCards"
           :key="card.title"
           :to="card.href"
-          class="feature-card feature-card-lg"
+          class="feature-card feature-card-lg w-full md:w-[calc(50%-1.25rem)] lg:w-[calc(33.333%-1.25rem)]"
         >
           <img :src="card.image" :alt="card.title" loading="lazy" />
           <div class="card-overlay">

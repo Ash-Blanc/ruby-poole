@@ -7,7 +7,9 @@ import SeoHead from '@/components/SeoHead.vue'
 onMounted(() => {
   // Google Ads Conversion Tracking
   // TODO: Replace with actual conversion ID and label
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   if (typeof window !== 'undefined' && (window as any).gtag) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).gtag('event', 'conversion', {
       'send_to': 'AW-XXXXXXXXXX/XXXXXXXXXXXX',
       'value': 1.0,
@@ -17,7 +19,9 @@ onMounted(() => {
 
   // Meta Pixel Tracking
   // TODO: Replace with actual pixel event
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   if (typeof window !== 'undefined' && (window as any).fbq) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).fbq('track', 'Lead')
   }
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Search, MapPin, SlidersHorizontal, Bell, Grid, Map, Home, DollarSign, BedDouble, Bath, ExternalLink, ArrowRight, TrendingUp, Calendar, Users } from 'lucide-vue-next'
-import { ref, computed } from 'vue'
+import { MapPin, Bell, Home, DollarSign, BedDouble, Bath, ExternalLink, ArrowRight, TrendingUp, Calendar, Users } from 'lucide-vue-next'
+import { ref } from 'vue'
 import SeoHead from '@/components/SeoHead.vue'
 import HomeAlertModal from '@/components/HomeAlertModal.vue'
 

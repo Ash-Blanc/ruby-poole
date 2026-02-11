@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Star, Phone, Mail, MapPin, Award, ArrowRight } from 'lucide-vue-next'
+import { Star, Phone, Mail, Award, ArrowRight } from 'lucide-vue-next'
 import SeoHead from '@/components/SeoHead.vue'
 import LeadForm from '@/components/LeadForm.vue'
 

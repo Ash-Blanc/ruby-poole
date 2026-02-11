@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { 
-  Phone, Mail, MapPin, Clock, Send, 
-  Facebook, Linkedin, X 
+  Phone, Mail, MapPin, Clock, Send, Facebook, Linkedin
 } from 'lucide-vue-next'
 
 const form = ref({
@@ -32,9 +31,9 @@ const contactInfo = [
 ]
 
 const socials = [
-  { icon: Facebook, href: 'https://www.facebook.com/ruby.n.poole', label: 'Facebook' },
-  { icon: X, href: 'https://twitter.com/RubyNWA', label: 'X (Twitter)' },
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/ruby-poole-90296699', label: 'LinkedIn' },
+  { icon: Facebook, svgPath: null, href: 'https://www.facebook.com/ruby.n.poole', label: 'Facebook' },
+  { icon: null, svgPath: 'M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z', href: 'https://twitter.com/RubyNWA', label: 'X (Twitter)' },
+  { icon: Linkedin, svgPath: null, href: 'https://www.linkedin.com/in/ruby-poole-90296699', label: 'LinkedIn' },
 ]
 </script>
 
@@ -151,7 +150,10 @@ const socials = [
                 :aria-label="social.label"
                 class="w-11 h-11 rounded-xl bg-neutral-content/10 hover:bg-primary hover:text-primary-content flex items-center justify-center transition-colors"
               >
-                <component :is="social.icon" class="w-5 h-5" />
+                <component v-if="social.icon" :is="social.icon" class="w-5 h-5" />
+                <svg v-else-if="social.svgPath" viewBox="0 0 24 24" class="w-5 h-5 fill-current">
+                  <path :d="social.svgPath" />
+                </svg>
               </a>
             </div>
           </div>

@@ -96,7 +96,7 @@ const stats = {
               @error="($event.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop'"
             />
             <div
-              class="absolute top-4 left-4 badge badge-md py-3 px-4 h-auto font-semibold border-none shadow-sm"
+              class="absolute top-4 left-4 badge badge-md py-2 px-4 h-auto font-semibold border-none shadow-sm"
               :class="listing.status === 'Sold' ? 'badge-success' : 'badge-primary'"
             >
               {{ listing.status }}
