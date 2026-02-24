@@ -15,54 +15,40 @@ import { ShieldCheck, Lock, Eye, FileText, Globe } from 'lucide-vue-next'
         </header>
 
         <div class="prose prose-lg max-w-none text-base-content/80">
-          <section class="mb-8">
-            <h2 class="text-2xl font-display text-base-content mb-4 flex items-center gap-2">
-              <Eye class="w-6 h-6 text-primary" /> Introduction
-            </h2>
-            <p>
-              Ruby Poole Team ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you visit our website and use our real estate services in Northwest Arkansas.
-            </p>
-          </section>
-
           <section class="mb-8 border-t border-base-200 pt-8">
             <h2 class="text-2xl font-display text-base-content mb-4 flex items-center gap-2">
-              <Lock class="w-6 h-6 text-primary" /> Information We Collect
+              <Eye class="w-6 h-6 text-primary" /> Information We Collect
             </h2>
-            <p>We may collect information that you provide directly to us, including:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Contact information (name, email address, phone number)</li>
-              <li>Real estate preferences and property interests</li>
-              <li>Communication history with our team</li>
-            </ul>
+            <p>First Colony collects personal and nonpublic information from you during the mortgage application process, whether completed in person, by telephone, or electronically. Providing this information is voluntary; however, it is required in order for us to provide mortgage products and services.</p>
+            <p>The information we collect may include, but is not limited to, your name, address, contact information, Social Security number, date of birth, income and employment information, asset information, tax information, credit history, debt obligations, and information related to the purpose of your loan. We may also obtain information from third parties such as credit reporting agencies, employers, banks, and other service providers in connection with processing your loan application.</p>
           </section>
 
           <section class="mb-8 border-t border-base-200 pt-8">
             <h2 class="text-2xl font-display text-base-content mb-4 flex items-center gap-2">
               <Globe class="w-6 h-6 text-primary" /> How We Use Your Information
             </h2>
-            <p>The information we collect is used for various purposes, such as:</p>
-            <ul class="list-disc pl-6 space-y-2">
-              <li>Providing and improving our real estate services</li>
-              <li>Responding to your inquiries and requests</li>
-              <li>Sending property listings and market updates</li>
-              <li>Complying with legal and FAIR HOUSING requirements</li>
-            </ul>
+            <p>We use the information we collect to evaluate your loan application, discuss available loan options, determine your eligibility for mortgage products, process your loan to completion, service your loan as applicable, comply with legal and regulatory requirements, manage risk, and improve our products and services.</p>
           </section>
 
           <section class="mb-8 border-t border-base-200 pt-8">
             <h2 class="text-2xl font-display text-base-content mb-4 flex items-center gap-2">
-              <FileText class="w-6 h-6 text-primary" /> Third-Party Disclosure
+              <FileText class="w-6 h-6 text-primary" /> Information Sharing With Affiliates & Third Parties
             </h2>
-            <p>
-              We do not sell your personal information. We may share information with trusted partners (e.g., mortgage lenders, title companies) as necessary to facilitate your real estate transactions, or when required by law.
-            </p>
+            <p>First Colony may share certain personal and nonpublic information with companies that are affiliated with us through common ownership or control. This includes our affiliated insurance company, First Insurance LLC, which may contact you to offer homeowners insurance or related insurance products in connection with your mortgage loan.</p>
+            <p>First Colony does not sell personal information, including as that term is defined under applicable state privacy laws. We may share limited information with non affiliated third parties only as necessary to process, service, or complete your loan, as authorized by you, or as otherwise permitted or required by law.</p>
           </section>
 
-          <footer class="mt-12 p-6 bg-base-200 rounded-xl">
-            <p class="text-sm italic">
-              Note: This is a placeholder privacy policy for demonstration purposes. For a legal production site, please consult with a qualified legal professional to ensure compliance with all applicable laws and regulations.
-            </p>
-          </footer>
+          <section class="mb-8 border-t border-base-200 pt-8">
+            <h2 class="text-2xl font-display text-base-content mb-4 flex items-center gap-2">
+              <Lock class="w-6 h-6 text-primary" /> Information Security
+            </h2>
+            <p>We restrict access to personal and nonpublic information to employees and authorized parties who need the information to provide products or services to you. We maintain physical, electronic, and procedural safeguards that comply with applicable federal and state regulations to protect your information.</p>
+          </section>
+
+          <h3 class="text-xl font-display mt-8 mb-4">Your Privacy Choices</h3>
+          <p>
+            If you wish to update your information, limit communications, or exercise any applicable opt out rights, you may contact us at any time by emailing <strong>compliance@firstcolonymortgage.com</strong> or calling <strong>866-200-1110</strong> and asking to speak with our compliance department.
+          </p>
         </div>
       </div>
     </div>

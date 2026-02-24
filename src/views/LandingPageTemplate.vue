@@ -17,7 +17,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+    heroImage: '/images/bentonville.jpg',
 })
 
 const pageTitle = computed(() => `${props.city} Homes for Sale`)

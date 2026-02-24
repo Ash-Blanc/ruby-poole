@@ -55,7 +55,7 @@ const stats = [
         <div class="relative">
           <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
             <img 
-              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
+              src="/images/bellavista.jpg"
               alt="The Ruby Poole Team"
               class="w-full h-full object-cover"
               loading="lazy"

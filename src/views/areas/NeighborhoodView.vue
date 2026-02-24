@@ -36,7 +36,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Walking distance to Square', 'Crystal Bridges nearby', 'Top restaurants', 'Active nightlife'],
             schools: ['Lincoln Jr. High', 'Bentonville High'],
             lifestyle: 'Urban/Walkable',
-            image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+            image: '/images/fayetteville.jpg',
         },
         'sugar-creek': {
             name: 'Sugar Creek',
@@ -47,7 +47,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Top-rated schools', 'Multiple parks', 'Community pool', 'Sports fields'],
             schools: ['Elm Tree Elementary', 'Bright Futures Elementary', 'Lincoln Jr. High'],
             lifestyle: 'Family-Friendly Suburban',
-            image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
+            image: '/images/bentonville.jpg',
         },
         'park-springs': {
             name: 'Park Springs',
@@ -58,7 +58,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Trail access', 'Modern homes', 'Near downtown', 'Community amenities'],
             schools: ['Apple Glen Elementary', 'Lincoln Jr. High', 'Bentonville High'],
             lifestyle: 'Modern Suburban',
-            image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+            image: '/images/springdale.jpg',
         },
         'bella-vista-highlands': {
             name: 'Bella Vista Highlands',
@@ -69,7 +69,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Gated community', 'Larger lots', 'Bentonville schools', 'Mature landscaping'],
             schools: ['Willowbrook Elementary', 'Bentonville West High'],
             lifestyle: 'Upscale Suburban',
-            image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80',
+            image: '/images/rogers.jpg',
         },
     },
     rogers: {
@@ -82,7 +82,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Pinnacle Hills Promenade', 'Upscale dining', 'Nearby trails', 'Modern amenities'],
             schools: ['Reagan Elementary', 'Elmwood Jr. High', 'Heritage High'],
             lifestyle: 'Upscale Urban',
-            image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+            image: '/images/bellavista.jpg',
         },
         'downtown-rogers': {
             name: 'Downtown Rogers',
@@ -93,7 +93,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Historic architecture', 'Local restaurants', 'Art galleries', 'Farmers market'],
             schools: ['Greer Lingle Middle', 'Rogers High'],
             lifestyle: 'Historic/Urban',
-            image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80',
+            image: '/images/rogers.jpg',
         },
         'lake-atalanta': {
             name: 'Lake Atalanta',
@@ -104,7 +104,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Lake access', 'Paved trails', 'Parks', 'Close to downtown Rogers'],
             schools: ['Eastside Elementary', 'Greer Lingle Middle', 'Rogers High'],
             lifestyle: 'Outdoor/Lakeside',
-            image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+            image: '/images/rogers.jpg',
         },
         'pleasant-crossing': {
             name: 'Pleasant Crossing',
@@ -115,7 +115,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['New builds', 'I-49 access', 'Shopping nearby', 'Growing community'],
             schools: ['Bonnie Grimes Elementary', 'Lingle Middle', 'Heritage High'],
             lifestyle: 'Modern Suburban',
-            image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
+            image: '/images/hero.jpg',
         },
     },
     'bella-vista': {
@@ -128,7 +128,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Golf course frontage', 'Lake access', 'Mature trees', 'POA amenities'],
             schools: ['Cooper Elementary', 'Bella Vista Middle', 'Bentonville West High'],
             lifestyle: 'Golf/Retirement',
-            image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&q=80',
+            image: '/images/springdale.jpg',
         },
         highlands: {
             name: 'Highlands',
@@ -139,7 +139,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Ozark views', 'Larger lots', 'Wooded setting', 'POA amenities'],
             schools: ['Cooper Elementary', 'Bella Vista Middle', 'Bentonville West High'],
             lifestyle: 'Rural/Private',
-            image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&q=80',
+            image: '/images/hero.jpg',
         },
         branchwood: {
             name: 'Branchwood',
@@ -150,7 +150,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Back 40 trail access', 'Near lakes', 'Family-friendly', 'Affordable'],
             schools: ['Cooper Elementary', 'Bella Vista Middle', 'Bentonville West High'],
             lifestyle: 'Active/Family',
-            image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80',
+            image: '/images/fayetteville.jpg',
         },
     },
     fayetteville: {
@@ -163,7 +163,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Walking to the Square', 'U of A proximity', 'Live music scene', 'Local dining'],
             schools: ['Owl Creek School', 'Ramay Jr. High', 'Fayetteville High'],
             lifestyle: 'Urban/Arts',
-            image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80',
+            image: '/images/springdale.jpg',
         },
         'gulley-park': {
             name: 'Gulley Park',
@@ -174,7 +174,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Park access', 'Mature trees', 'Walkable streets', 'Near U of A'],
             schools: ['Butterfield Elementary', 'Ramay Jr. High', 'Fayetteville High'],
             lifestyle: 'Established Suburban',
-            image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+            image: '/images/bellavista.jpg',
         },
     },
     springdale: {
@@ -187,7 +187,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Top-rated school', 'Larger homes', 'Community feel', 'Well-maintained'],
             schools: ['George Elementary', 'Har-Ber High'],
             lifestyle: 'Upscale Suburban',
-            image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
+            image: '/images/bentonville.jpg',
         },
         'elm-springs': {
             name: 'Elm Springs',
@@ -198,7 +198,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Affordable', 'Larger lots', 'New construction', 'Small-town charm'],
             schools: ['Elm Springs Elementary', 'Southwest Jr. High', 'Springdale High'],
             lifestyle: 'Small Town/Affordable',
-            image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80',
+            image: '/images/springdale.jpg',
         },
     },
     centerton: {
@@ -211,7 +211,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Resort-style pool', 'Splash pad', 'Walking trails', 'Community events'],
             schools: ['Centerton-Gamble Elementary', 'Gravette Middle', 'Gravette High'],
             lifestyle: 'Master-Planned Family',
-            image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200&q=80',
+            image: '/images/rogers.jpg',
         },
         'mill-creek': {
             name: 'Mill Creek',
@@ -222,7 +222,7 @@ const neighborhoodData: Record<string, Record<string, NeighborhoodData>> = {
             highlights: ['Affordable', 'New builds', 'Playgrounds', 'Growing area'],
             schools: ['Centerton-Gamble Elementary', 'Gravette Middle', 'Gravette High'],
             lifestyle: 'Starter/Growing Family',
-            image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+            image: '/images/bellavista.jpg',
         },
     },
 }

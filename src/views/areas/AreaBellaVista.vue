@@ -38,7 +38,7 @@ const faqs = [
       city="Bella Vista"
       tagline="Lake Living in the Ozarks"
       description="Bella Vista is a nature lover's paradise with seven lakes, miles of trails, and a relaxed lifestyle. Originally a retirement community, it now attracts families and outdoor enthusiasts of all ages."
-      hero-image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80"
+      hero-image="/images/fayetteville.jpg"
       :highlights="highlights"
       :features="features"
       :search-params="{ city: 'Bella Vista', state: 'AR' }"

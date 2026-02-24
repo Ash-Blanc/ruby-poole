@@ -32,6 +32,7 @@ const quickLinks = [
     { name: 'Moving to NWA', href: '/moving-to-nwa' },
     { name: 'Contact Us', href: '/#contact' },
     { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Disclaimer', href: '/disclaimer' },
     { name: 'Terms of Service', href: '/terms' },
 ]
 
@@ -122,9 +123,18 @@ const socials = [
         </div>
 
         <!-- Bottom Bar -->
-        <div class="border-t border-neutral-content/10">
-            <div class="container-custom py-6">
-                <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="border-t border-neutral-content/10 pt-8 pb-6">
+            <div class="container-custom">
+                <div class="flex justify-center mb-6">
+                    <img src="@/assets/logos/First-Colony-Mortgage-Logo-NMLS.png" alt="First Colony Mortgage Equal Housing Logo" class="h-12 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
+                </div>
+                
+                <p class="text-xs text-neutral-content/50 text-center max-w-4xl mx-auto mb-6 leading-relaxed">
+                    First Colony Mortgage Corporation is an Equal Housing Opportunity Lender NMLS #3112, AR NMLS# 118723. All loans are subject to credit approval. Terms and conditions per loan type may vary. See loan officer for details.
+                    <RouterLink to="/disclaimer" class="hover:text-primary transition-colors underline underline-offset-2">See State Licenses</RouterLink>.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-neutral-content/10 pt-6">
                     <p class="text-sm text-neutral-content/60 text-center sm:text-left">
                         &copy; {{ currentYear }} NWA Neighborhoods by The Ruby Poole Team. All rights reserved.
                     </p>

@@ -10,7 +10,7 @@ const teamMembers = [
     reviews: 35,
     sales: '160 in 12mo',
     priceRange: '$11K - $1.6M',
-    image: 'https://photos.zillowstatic.com/fp/96ec58536ba341be15623aa3fe6e0676-h_l.jpg',
+    image: '/images/ruby.jpg',
     profileUrl: 'https://www.zillow.com/profile/RubyPoole1',
   },
   {
@@ -20,7 +20,7 @@ const teamMembers = [
     reviews: 17,
     sales: '6 in 12mo',
     priceRange: '$113K - $457K',
-    image: 'https://photos.zillowstatic.com/fp/5badaacc2e3f92628b921689b0df0980-h_l.jpg',
+    image: '/images/ruby.jpg',
     profileUrl: 'https://www.zillow.com/profile/katherine91162',
   },
   {
@@ -30,7 +30,7 @@ const teamMembers = [
     reviews: 8,
     sales: '0 in 12mo',
     priceRange: 'No recent range',
-    image: 'https://photos.zillowstatic.com/fp/c62577695a83f9b68475eb2f578f1dd7-h_l.jpg',
+    image: '/images/ruby.jpg',
     profileUrl: 'https://www.zillow.com/profile/hjorgensen321',
   },
   {
@@ -40,7 +40,7 @@ const teamMembers = [
     reviews: 3,
     sales: '1 in 12mo',
     priceRange: 'No recent range',
-    image: 'https://photos.zillowstatic.com/fp/f280d2081416cfe296631965ee044c65-h_l.jpg',
+    image: '/images/ruby.jpg',
     profileUrl: 'https://www.zillow.com/profile/Jerry%20Beaudion',
   },
   {
@@ -50,7 +50,7 @@ const teamMembers = [
     reviews: 2,
     sales: '4 in 12mo',
     priceRange: '$325K - $810K',
-    image: 'https://photos.zillowstatic.com/fp/2bd1eabeaa85ee867856798045202b4b-h_l.jpg',
+    image: '/images/ruby.jpg',
     profileUrl: 'https://www.zillow.com/profile/TaylorHullCrowell',
   },
   {
@@ -60,7 +60,7 @@ const teamMembers = [
     reviews: 0,
     sales: '4 in 12mo',
     priceRange: '$314K - $595K',
-    image: 'https://photos.zillowstatic.com/fp/43aafcb126114b9231222671dee1f88b-h_l.jpg',
+    image: '/images/ruby.jpg',
     profileUrl: 'https://www.zillow.com/profile/jerijohnson7',
   },
   {
@@ -70,7 +70,7 @@ const teamMembers = [
     reviews: 0,
     sales: '0 in 12mo',
     priceRange: '$660K',
-    image: 'https://photos.zillowstatic.com/fp/83eff06a342b0b9c99d2dfa42664a65e-h_l.jpg',
+    image: '/images/ruby.jpg',
     profileUrl: 'https://www.zillow.com/profile/johnson%20greg96',
   },
 ]

@@ -39,7 +39,7 @@ const features = [
     <section class="relative min-h-[60vh] flex items-center overflow-hidden">
       <div class="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=80" 
+          src="/images/hero.jpg" 
           alt="Home with acreage in Arkansas"
           class="w-full h-full object-cover"
         />
@@ -111,7 +111,7 @@ const features = [
       <div class="container-custom">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div class="relative aspect-video rounded-2xl overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="Land property" class="w-full h-full object-cover" />
+            <img src="/images/bentonville.jpg" alt="Land property" class="w-full h-full object-cover" />
           </div>
           <div>
             <h2 class="text-3xl font-display mb-6">Why Buy Land in NWA?</h2>

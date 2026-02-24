@@ -38,7 +38,7 @@ const communities = [
         <!-- Hero -->
         <section class="relative min-h-[60vh] flex items-center overflow-hidden">
             <div class="absolute inset-0">
-                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80"
+                <img src="/images/bentonville.jpg"
                     alt="Luxury home in Northwest Arkansas" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 bg-gradient-to-r from-neutral/90 via-neutral/70 to-transparent"></div>
             </div>

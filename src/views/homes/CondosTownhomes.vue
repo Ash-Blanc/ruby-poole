@@ -39,7 +39,7 @@ const locations = [
     <section class="relative min-h-[60vh] flex items-center overflow-hidden">
       <div class="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200&q=80" 
+          src="/images/hero.jpg" 
           alt="Condos and townhomes in Northwest Arkansas"
           class="w-full h-full object-cover"
         />
@@ -119,7 +119,7 @@ const locations = [
           </div>
           <div class="relative aspect-video rounded-2xl overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80"
+              src="/images/springdale.jpg"
               alt="Modern condo interior"
               class="w-full h-full object-cover"
             />

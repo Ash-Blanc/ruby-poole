@@ -5,7 +5,7 @@ import { Bed, Bath, MapPin, ArrowRight, ExternalLink } from 'lucide-vue-next'
 const listings = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+    image: '/images/bentonville.jpg',
     price: '$249,000',
     address: '2351 W Skyler Dr',
     city: 'Fayetteville, AR 72703',
@@ -15,7 +15,7 @@ const listings = [
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
+    image: '/images/rogers.jpg',
     price: '$449,950',
     address: '4749 Cowboy St',
     city: 'Springdale, AR 72762',
@@ -25,7 +25,7 @@ const listings = [
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80',
+    image: '/images/springdale.jpg',
     price: '$445,950',
     address: '7699 Scenic Valley Ave',
     city: 'Springdale, AR 72762',
@@ -35,7 +35,7 @@ const listings = [
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80',
+    image: '/images/springdale.jpg',
     price: '$299,900',
     address: '397 Thompson St',
     city: 'Centerton, AR 72719',
@@ -45,7 +45,7 @@ const listings = [
   },
   {
     id: 5,
-    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+    image: '/images/bentonville.jpg',
     price: '$445,950',
     address: '7735 Scenic Valley Ave',
     city: 'Springdale, AR 72762',
@@ -55,7 +55,7 @@ const listings = [
   },
   {
     id: 6,
-    image: 'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&q=80',
+    image: '/images/bentonville.jpg',
     price: '$465,000',
     address: '67 Pamona Dr',
     city: 'Bella Vista, AR 72715',
@@ -93,7 +93,7 @@ const stats = {
               :alt="listing.address"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
-              @error="($event.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop'"
+              @error="($event.target as HTMLImageElement).src = '/images/bentonville.jpg'"
             />
             <div
               class="absolute top-4 left-4 badge badge-md py-2 px-4 h-auto font-semibold border-none shadow-sm"

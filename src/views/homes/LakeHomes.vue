@@ -36,7 +36,7 @@ const features = [
         <!-- Hero -->
         <section class="relative min-h-[60vh] flex items-center overflow-hidden">
             <div class="absolute inset-0">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80"
+                <img src="/images/springdale.jpg"
                     alt="Lake home in Northwest Arkansas" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 bg-gradient-to-r from-neutral/90 via-neutral/70 to-transparent"></div>
             </div>
@@ -122,7 +122,7 @@ const features = [
                         </div>
                     </div>
                     <div class="relative aspect-video rounded-2xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=800&q=80"
+                        <img src="/images/springdale.jpg"
                             alt="Lake home view" class="w-full h-full object-cover" />
                     </div>
                 </div>

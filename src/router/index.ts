@@ -209,6 +209,12 @@ const router = createRouter({
       meta: { title: 'Privacy Policy', description: 'Our privacy policy' },
     },
     {
+      path: '/disclaimer',
+      name: 'disclaimer',
+      component: () => import('../views/DisclaimerView.vue'),
+      meta: { title: 'Disclaimer & Licensing', description: 'Important licensing information and disclosures.' },
+    },
+    {
       path: '/terms',
       name: 'terms',
       component: () => import('../views/TermsView.vue'),

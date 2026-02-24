@@ -47,7 +47,7 @@ While most residents drive, the city is investing heavily in bike infrastructure
     date: '2024-02-01',
     author: 'Ruby Poole',
     category: 'Relocation',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+    image: '/images/bentonville.jpg',
     featured: true,
     tags: ['bentonville', 'relocation', 'guide'],
   },
@@ -79,7 +79,7 @@ Inventory remains tight, but we're seeing more balanced conditions than in previ
     date: '2024-01-15',
     author: 'Ruby Poole',
     category: 'Market Updates',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
+    image: '/images/bentonville.jpg',
     tags: ['market', 'trends', '2024'],
   },
   {
@@ -120,7 +120,7 @@ A good buyer's agent costs you nothing (seller pays commission) and can save you
     date: '2024-01-08',
     author: 'Sarah Johnson',
     category: 'Buyer Tips',
-    image: 'https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800&q=80',
+    image: '/images/fayetteville.jpg',
     tags: ['first-time buyer', 'tips', 'mistakes'],
   },
   {
@@ -159,7 +159,7 @@ Spanning 28,000 acres with 487 miles of shoreline, Beaver Lake offers everything
     date: '2024-01-01',
     author: 'Michael Davis',
     category: 'Lifestyle',
-    image: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=800&q=80',
+    image: '/images/fayetteville.jpg',
     tags: ['beaver lake', 'waterfront', 'lake homes'],
   },
   {
@@ -207,7 +207,7 @@ Once staged, hire a professional photographer. Online listings with professional
     date: '2024-01-25',
     author: 'Ruby Poole',
     category: 'Seller Tips',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80',
+    image: '/images/fayetteville.jpg',
     tags: ['staging', 'selling', 'tips'],
   },
   {
@@ -251,7 +251,7 @@ Local property managers typically charge 8-10% of monthly rent. Good management 
     date: '2024-01-18',
     author: 'Michael Davis',
     category: 'Investment',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
+    image: '/images/hero.jpg',
     tags: ['investment', 'rental', 'roi'],
   },
   {
@@ -316,7 +316,7 @@ All three districts offer excellent education. Visit campuses and talk to famili
     date: '2024-01-12',
     author: 'Sarah Johnson',
     category: 'Relocation',
-    image: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80',
+    image: '/images/hero.jpg',
     tags: ['schools', 'education', 'families'],
   },
   {
@@ -360,7 +360,7 @@ Looking for the perfect family-friendly neighborhood in NWA? Here's our top pick
     date: '2025-01-15',
     author: 'Ruby Poole',
     category: 'Neighborhoods',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
+    image: '/images/springdale.jpg',
     featured: true,
     tags: ['neighborhoods', 'families', 'schools', 'best-of'],
   },
@@ -400,7 +400,7 @@ Choose Bentonville if you value walkability, culture, and top-rated schools and 
     date: '2025-01-10',
     author: 'Ruby Poole',
     category: 'Neighborhoods',
-    image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
+    image: '/images/bentonville.jpg',
     tags: ['bentonville', 'rogers', 'comparison', 'neighborhoods'],
   },
   {
@@ -447,7 +447,7 @@ These neighborhoods won't stay under the radar forever. NWA's growth is spreadin
     date: '2025-01-05',
     author: 'Ruby Poole',
     category: 'Neighborhoods',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
+    image: '/images/springdale.jpg',
     featured: true,
     tags: ['neighborhoods', 'hidden-gems', 'value', 'investment'],
   },
@@ -494,7 +494,7 @@ Many employers in NWA offer relocation packages. Ask about it — Walmart, Tyson
     date: '2025-01-20',
     author: 'Sarah Johnson',
     category: 'Relocation',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
+    image: '/images/bellavista.jpg',
     tags: ['relocation', 'costs', 'budget', 'moving'],
   },
 ]

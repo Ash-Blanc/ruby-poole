@@ -39,7 +39,7 @@ const faqs = [
       city="Rogers"
       tagline="Where Tradition Meets Progress"
       description="Rogers offers the perfect blend of small-town values and modern conveniences. With excellent schools, Beaver Lake access, and a thriving economy, it's an ideal place to call home."
-      hero-image="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80"
+      hero-image="/images/rogers.jpg"
       :highlights="highlights"
       :features="features"
       :search-params="{ city: 'Rogers', state: 'AR' }"

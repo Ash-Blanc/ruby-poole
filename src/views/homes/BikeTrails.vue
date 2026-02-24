@@ -38,7 +38,7 @@ const benefits = [
         <!-- Hero -->
         <section class="relative min-h-[60vh] flex items-center overflow-hidden">
             <div class="absolute inset-0">
-                <img src="https://images.unsplash.com/photo-1596727147705-54a7128052a9?q=80&w=1200&auto=format&fit=crop"
+                <img src="/images/bentonville.jpg"
                     alt="Mountain biking trail in Northwest Arkansas" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 bg-gradient-to-r from-neutral/90 via-neutral/70 to-transparent"></div>
             </div>
@@ -121,7 +121,7 @@ const benefits = [
                         </div>
                     </div>
                     <div>
-                        <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?w=600&q=80"
+                        <img src="/images/bellavista.jpg"
                             alt="Cycling trail in Northwest Arkansas" class="rounded-2xl shadow-lg w-full"
                             loading="lazy" />
                     </div>

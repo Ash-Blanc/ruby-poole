@@ -37,7 +37,7 @@ const faqs = [
       city="Springdale"
       tagline="Affordable Living with Big Opportunities"
       description="Springdale offers the best value in Northwest Arkansas. Home to Tyson Foods and a diverse, welcoming community, it's the perfect place for families and first-time buyers."
-      hero-image="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80"
+      hero-image="/images/bentonville.jpg"
       :highlights="highlights"
       :features="features"
       :search-params="{ city: 'Springdale', state: 'AR' }"

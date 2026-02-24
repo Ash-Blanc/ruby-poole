@@ -67,7 +67,7 @@ const districts = [
     <section class="relative min-h-[50vh] flex items-center overflow-hidden">
       <div class="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&q=80" 
+          src="/images/springdale.jpg" 
           alt="School in Northwest Arkansas"
           class="w-full h-full object-cover"
         />

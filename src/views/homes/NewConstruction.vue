@@ -48,7 +48,7 @@ const features = [
     <section class="relative min-h-[60vh] flex items-center overflow-hidden">
       <div class="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80" 
+          src="/images/hero.jpg" 
           alt="New construction home in Arkansas"
           class="w-full h-full object-cover"
         />

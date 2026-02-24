@@ -39,7 +39,7 @@ const features = [
     <section class="relative min-h-[60vh] flex items-center overflow-hidden">
       <div class="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1573152143286-0c422b4d2175?w=1200&q=80" 
+          src="/images/fayetteville.jpg" 
           alt="Downtown Bentonville, Arkansas"
           class="w-full h-full object-cover"
         />
@@ -122,7 +122,7 @@ const features = [
           </div>
           <div class="relative aspect-video rounded-2xl overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1533044309907-0fa3413da946?w=800&q=80"
+              src="/images/hero.jpg"
               alt="Downtown Bentonville Square"
               class="w-full h-full object-cover"
             />

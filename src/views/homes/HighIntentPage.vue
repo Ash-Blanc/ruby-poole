@@ -31,7 +31,7 @@ const configs: Record<string, IntentConfig> = {
         seoDescription: 'Browse affordable homes under $400,000 in Bentonville, Rogers, Springdale, Fayetteville and more.',
         canonical: '/homes-under-400k',
         icon: DollarSign,
-        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80',
+        image: '/images/bellavista.jpg',
         features: ['Starter homes and first-time buyer options', 'Move-in-ready properties', 'Multiple NWA cities available', 'New construction under $400K', 'Great school district options', 'Investment potential'],
         faqs: [
             { q: 'Where are the most affordable homes in NWA?', a: 'Springdale and parts of Rogers typically offer the most affordable options under $400K, with growing neighborhoods and good school access.' },
@@ -46,7 +46,7 @@ const configs: Record<string, IntentConfig> = {
         seoDescription: 'Find single-story and ranch-style homes in NWA. Browse one-level homes in Bentonville, Rogers, and surrounding areas.',
         canonical: '/one-level-homes',
         icon: Home,
-        image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
+        image: '/images/rogers.jpg',
         features: ['No-stairs living', 'Ideal for aging in place', 'Open floor plan options', 'Low maintenance designs', 'Wide doorways and accessibility', 'Single-level master suites'],
         faqs: [
             { q: 'Are one-level homes more expensive?', a: 'One-level homes can carry a slight premium due to larger lot requirements, but NWA has great options at various price points.' },
@@ -61,7 +61,7 @@ const configs: Record<string, IntentConfig> = {
         seoDescription: 'Find homes with acreage and land in NWA. Browse properties with 1+ acres in Bentonville, Rogers, and surrounding areas.',
         canonical: '/homes-with-acreage',
         icon: TreePine,
-        image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80',
+        image: '/images/rogers.jpg',
         features: ['1 to 50+ acre properties', 'Privacy and space', 'Horse-friendly properties available', 'Custom build opportunities', 'Scenic Ozark views', 'Multiple cities and price ranges'],
         faqs: [
             { q: 'Where can I find homes with land in NWA?', a: 'Western Benton County, eastern Washington County, and rural areas around Centerton and Gravette offer the most land options.' },
@@ -76,7 +76,7 @@ const configs: Record<string, IntentConfig> = {
         seoDescription: 'Browse homes with oversized garages in NWA. Find 3+ car garage homes in Bentonville, Rogers, and surrounding areas.',
         canonical: '/homes-3-car-garage',
         icon: Car,
-        image: 'https://images.unsplash.com/photo-1558036117-15d82a90b9b1?w=1200&q=80',
+        image: '/images/rogers.jpg',
         features: ['3+ car attached garages', 'Workshop and hobby space', 'RV and boat storage options', 'Heated and finished garage options', 'New construction with oversized garages', 'Multiple price ranges'],
         faqs: [
             { q: 'Are 3-car garages common in NWA?', a: 'They are increasingly common in newer construction, especially in Bentonville, Rogers, and Centerton subdivisions.' },
@@ -91,7 +91,7 @@ const configs: Record<string, IntentConfig> = {
         seoDescription: 'Find homes with swimming pools in NWA. Browse pool homes in Bentonville, Rogers, and surrounding areas.',
         canonical: '/homes-with-pool',
         icon: Waves,
-        image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80',
+        image: '/images/bentonville.jpg',
         features: ['In-ground swimming pools', 'Resort-style backyards', 'Heated pool options', 'Pool and spa combos', 'Fenced and private yards', 'Multiple price ranges'],
         faqs: [
             { q: 'How much does pool maintenance cost in NWA?', a: 'Expect $100-$200/month for routine pool maintenance in NWA, with seasonal opening/closing costs.' },

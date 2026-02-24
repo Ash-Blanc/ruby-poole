@@ -39,7 +39,7 @@ const faqs = [
       city="Bentonville"
       tagline="The Heart of Northwest Arkansas"
       description="Bentonville combines small-town charm with world-class amenities. Home to Walmart headquarters, Crystal Bridges Museum, and an incredible trail system, it's one of the fastest-growing cities in America."
-      hero-image="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&q=80"
+      hero-image="/images/hero.jpg"
       :highlights="highlights"
       :features="features"
       :search-params="{ city: 'Bentonville', state: 'AR' }"

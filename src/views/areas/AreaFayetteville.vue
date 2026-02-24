@@ -37,7 +37,7 @@ const faqs = [
       city="Fayetteville"
       tagline="Culture, Community & Razorback Pride"
       description="Fayetteville is the cultural heart of Northwest Arkansas. Home to the University of Arkansas, it offers vibrant nightlife, world-class arts, and a youthful energy that's hard to match."
-      hero-image="https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?w=1200&q=80"
+      hero-image="/images/hero.jpg"
       :highlights="highlights"
       :features="features"
       :search-params="{ city: 'Fayetteville', state: 'AR' }"

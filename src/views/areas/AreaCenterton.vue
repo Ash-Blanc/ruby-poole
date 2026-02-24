@@ -37,7 +37,7 @@ const faqs = [
       city="Centerton"
       tagline="Fastest-Growing City in NWA"
       description="Centerton offers affordable living in the Bentonville school district with easy access to all that Northwest Arkansas has to offer. New construction, family parks, and a growing downtown."
-      hero-image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"
+      hero-image="/images/rogers.jpg"
       :highlights="highlights"
       :features="features"
       :search-params="{ city: 'Centerton', state: 'AR' }"
