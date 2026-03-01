@@ -83,12 +83,12 @@ const handleSearch = () => {
 
                     <!-- PPC CTAs -->
                     <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-6">
-                        <RouterLink to="/search" class="btn btn-primary btn-lg gap-2 px-8">
+                        <RouterLink to="/search" class="btn btn-primary btn-lg gap-2 px-5">
                             <Home class="w-5 h-5" />
                             Explore Homes
                         </RouterLink>
                         <button @click="showAlertModal = true"
-                            class="btn btn-outline border-white/30 text-white hover:bg-white hover:text-base-content btn-lg gap-2 px-8">
+                            class="btn btn-outline border-white/30 text-white hover:bg-white hover:text-base-content btn-lg gap-2 px-5">
                             <Bell class="w-5 h-5" />
                             Get Home Alerts
                         </button>
@@ -96,7 +96,7 @@ const handleSearch = () => {
 
                     <!-- Secondary CTA -->
                     <div class="flex justify-center lg:justify-start mb-10">
-                        <a href="#contact" class="btn btn-ghost text-white/70 hover:text-white gap-2 px-6">
+                        <a href="#contact" class="btn btn-ghost text-white/70 hover:text-white gap-2 px-3">
                             <Phone class="w-5 h-5" />
                             Talk to a Local Expert
                         </a>

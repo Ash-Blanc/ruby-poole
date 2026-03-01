@@ -148,7 +148,7 @@ const closeDropdowns = () => {
 
         <!-- Actions -->
         <div class="flex items-center gap-3">
-          <RouterLink to="/#contact" class="btn btn-primary btn-sm hidden md:inline-flex gap-2 px-5">
+          <RouterLink to="/#contact" class="btn btn-primary btn-sm hidden md:inline-flex gap-2 px-3">
             <Phone class="w-4 h-4" />
             Get in Touch
           </RouterLink>
