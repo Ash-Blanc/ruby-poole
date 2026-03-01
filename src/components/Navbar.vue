@@ -21,6 +21,16 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { name: 'Home', href: '/', icon: Home },
+  {
+    name: 'First Colony',
+    icon: Users,
+    dropdown: [
+      { name: 'Stephanie Bevard', href: '/team/stephanie-bevard', icon: Users },
+      { name: 'Brandon Bevard', href: '/team/brandon-bevard', icon: Users },
+      { name: 'Matt Harris', href: '/team/matt-harris', icon: Users },
+      { name: 'Jada Atwood', href: '/team/jada-atwood', icon: Users },
+    ]
+  },
   { 
     name: 'Neighborhoods', 
     icon: MapPin,
@@ -71,7 +81,7 @@ const closeDropdowns = () => {
 <template>
   <nav class="sticky top-0 z-50 glass-card">
     <div class="container-custom">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex items-center justify-between gap-8 h-20">
         <!-- Logo -->
         <RouterLink to="/" class="flex items-center gap-3 group" @click="closeDropdowns">
           <Logo :size="40" variant="full" />

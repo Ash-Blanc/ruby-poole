@@ -5,7 +5,7 @@ const socialLinks = [
   { 
     name: 'YouTube', 
     handle: '@nwaneighborhoods', 
-    href: '#', 
+    href: 'https://www.youtube.com/@nwaneighborhoods', 
     brandColor: 'hover:border-[#FF0000]',
     textColor: 'group-hover:text-[#FF0000]',
     description: 'Neighborhood deep-dives & home tours',

@@ -21,6 +21,7 @@ interface TeamMember {
     phone: string
     email: string
     areas: string[]
+    teamName?: string
 }
 
 const teamMembers: Record<string, TeamMember> = {
@@ -80,6 +81,78 @@ const teamMembers: Record<string, TeamMember> = {
         email: 'emily@rubypoole.com',
         areas: ['Bentonville', 'Rogers', 'Springdale'],
     },
+    'stephanie-bevard': {
+        name: 'Stephanie Bevard',
+        title: 'Mortgage Expert',
+        teamName: 'First Colony Mortgage',
+        bio: `With over three decades of experience in the mortgage industry, I began my career in 1990 and have been helping families achieve homeownership ever since. Having witnessed the evolution of lending firsthand, I bring seasoned expertise, steady leadership, and proven strategies to guide buyers and sellers through every type of market.
+
+I’m a dedicated student of professional coaching and personal development, continually investing in skills that elevate communication, strategy, and results. My focus goes beyond transactions — I’m deeply committed to creating an exceptional client experience built on trust, education, and clear guidance. I believe informed clients make confident decisions, and my mission is to support them every step of the way.
+
+Family is at the heart of everything I do. I’m blessed with four children and twelve grandchildren, and I’m proud to serve alongside my brother and sons as part of our Family Mortgage Team. Together, we combine experience, energy, and shared values to better serve our community.
+
+Outside of lending, I embrace ranch life on our 240-acre ranch. The lessons learned from the land — discipline, resilience, stewardship, and long-term vision — shape how I approach both business and life. I’m grateful every day for the opportunity to serve families in achieving homeownership while living a life grounded in purpose, hard work, and gratitude.`,
+        image: '/images/stephanie.png',
+        specialties: ['Mortgages', 'Homeownership Experience'],
+        rating: 5.0,
+        reviews: 0,
+        yearsExperience: 34,
+        homesSold: 0,
+        phone: '(801) 361-7433',
+        email: 'stephanie@rubypoole.com',
+        areas: ['Northwest Arkansas'],
+    },
+    'brandon-bevard': {
+        name: 'Brandon Bevard',
+        title: 'Mortgage Expert',
+        teamName: 'First Colony Mortgage',
+        bio: `I joined the mortgage industry in 2017, bringing with me a background in construction that shaped my appreciation for teamwork, attention to detail, and creative problem-solving. I spent four years as a Loan Officer Assistant on a $100 million-per-year producing team, where I was exposed to a wide range of unique and complex lending scenarios. That experience gave me a deep understanding of the loan process from start to finish and taught me how to anticipate challenges before they become obstacles.
+
+Today, I focus on guiding clients through the mortgage process with clarity and confidence. I have a particular passion for working with first-time homebuyers and those who need extra strategy, education, and hands-on support along the way. I believe communication is everything, so I make it a priority to keep my clients informed, prepared, and comfortable at every step.
+
+Whether your situation is straightforward or more complex, I thrive on finding solutions and creating a smooth, seamless experience. Outside of work, I enjoy motorcycles and sports, which reflect my competitive drive and appreciation for performance and precision.
+
+My team and I are committed to delivering a professional, efficient, and personalized home financing experience to help you move forward with confidence.`,
+        image: '/images/brandon.png',
+        specialties: ['Mortgages', 'Home Financing'],
+        rating: 5.0,
+        reviews: 0,
+        yearsExperience: 7,
+        homesSold: 0,
+        phone: '(801) 361-6034',
+        email: 'brandon@rubypoole.com',
+        areas: ['Northwest Arkansas'],
+    },
+    'matt-harris': {
+        name: 'Matt Harris',
+        title: 'Loan Officer, NMLS#218374',
+        teamName: 'First Colony Mortgage',
+        bio: `Matt Harris is a Loan Officer at First Colony Mortgage. His biography is coming soon.`,
+        image: '/images/matt.png',
+        specialties: ['Mortgages', 'Home Financing'],
+        rating: 5.0,
+        reviews: 0,
+        yearsExperience: 0,
+        homesSold: 0,
+        phone: '(530) 306-2447',
+        email: 'matt@rubypoole.com',
+        areas: ['Northwest Arkansas', 'Utah'],
+    },
+    'jada-atwood': {
+        name: 'Jada Atwood',
+        title: 'LOA, NMLS#2127779',
+        teamName: 'First Colony Mortgage',
+        bio: `Jada Atwood is a Loan Officer Assistant at First Colony Mortgage. Her biography is coming soon.`,
+        image: '/images/jada.png',
+        specialties: ['Mortgages', 'Home Financing'],
+        rating: 5.0,
+        reviews: 0,
+        yearsExperience: 0,
+        homesSold: 0,
+        phone: '(801) 400-0193',
+        email: 'jada@rubypoole.com',
+        areas: ['Northwest Arkansas', 'Utah'],
+    },
 }
 
 const slug = route.params.slug as string
@@ -125,7 +198,7 @@ const agent = computed(() => teamMembers[slug] || null)
                         <div class="lg:col-span-2">
                             <div class="flex items-center gap-2 mb-2">
                                 <Award class="w-5 h-5 text-primary" />
-                                <span class="text-sm font-medium text-primary">Ruby Poole Team</span>
+                                <span class="text-sm font-medium text-primary">{{ agent.teamName || 'Ruby Poole Team' }}</span>
                             </div>
 
                             <h1 class="text-4xl font-display mb-2">{{ agent.name }}</h1>

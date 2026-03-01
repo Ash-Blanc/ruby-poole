@@ -16,20 +16,40 @@ const form = ref({
 
 const isSubmitting = ref(false)
 
-const handleSubmit = () => {
+const handleSubmit = async () => {
     isSubmitting.value = true
-    // Simulate form submission
-    setTimeout(() => {
-        isSubmitting.value = false
+    try {
+        const formData = {
+            ...form.value,
+            source: 'contact-page',
+            timestamp: new Date().toISOString(),
+        }
+
+        const response = await fetch('https://formspree.io/f/xeelpbna', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+
+        if (!response.ok) throw new Error('Form submission failed')
+
         form.value = { name: '', email: '', phone: '', message: '' }
         alert('Thank you! We\'ll be in touch soon.')
-    }, 1000)
+    } catch (error) {
+        console.error('Contact form error:', error)
+        alert('Something went wrong. Please try again or call us directly.')
+    } finally {
+        isSubmitting.value = false
+    }
 }
 
 const contactInfo = [
     { icon: Phone, label: 'Phone', value: '(479) 555-0123', href: 'tel:+14795550123' },
     { icon: Mail, label: 'Email', value: 'hello@rubypoole.com', href: 'mailto:hello@rubypoole.com' },
-    { icon: MapPin, label: 'Office', value: '123 Main St, Rogers, AR 72756', href: '#' },
+    { icon: MapPin, label: 'Office', value: '123 Main St, Rogers, AR 72756', href: 'https://maps.google.com/?q=123+Main+St,+Rogers,+AR+72756' },
     { icon: Clock, label: 'Hours', value: 'Mon-Sat: 9AM-6PM', href: null },
 ]
 
