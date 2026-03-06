@@ -15,7 +15,6 @@ coverage
 *.local
 
 # Editor directories and files
-.vscode
 .agent
 .idea
 *.suo
@@ -40,3 +39,4 @@ __screenshots__/
 
 test-results/
 playwright-report/
+config.bat

@@ -126,7 +126,9 @@ const socials = [
         <div class="border-t border-neutral-content/10 pt-8 pb-6">
             <div class="container-custom">
                 <div class="flex justify-center mb-6">
-                    <img src="@/assets/logos/First-Colony-Mortgage-Logo-NMLS.png" alt="First Colony Mortgage Equal Housing Logo" class="h-12 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
+                    <a href="https://firstcolonymortgage.com/location/arkansas/" target="_blank" rel="noopener noreferrer">
+                        <img src="@/assets/logos/First-Colony-Mortgage-Logo-NMLS.png" alt="First Colony Mortgage Equal Housing Logo" class="h-12 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
+                    </a>
                 </div>
                 
                 <p class="text-xs text-neutral-content/50 text-center max-w-4xl mx-auto mb-6 leading-relaxed">

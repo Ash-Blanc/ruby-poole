@@ -179,6 +179,12 @@ const router = createRouter({
       meta: { title: 'Moving to Northwest Arkansas', description: 'Your complete guide to relocating to NWA' },
     },
 
+    {
+      path: '/first-colony',
+      name: 'first-colony',
+      component: () => import('../views/FirstColonyView.vue'),
+      meta: { title: 'First Colony Mortgage', description: 'Meet the First Colony Mortgage team' },
+    },
     // Team & Agents
     {
       path: '/team',
