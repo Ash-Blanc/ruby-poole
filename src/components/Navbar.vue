@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { Home, Users, MapPin, Phone, Menu, X, ChevronDown, Waves, Hammer, Search, BookOpen, Video, Building, Bike, GraduationCap, PlaneTakeoff } from 'lucide-vue-next'
 import Logo from '@/components/Logo.vue'
+import FirstColonyIcon from '@/components/icons/FirstColonyIcon.vue'
 
 const isMenuOpen = ref(false)
 const activeDropdown = ref<string | null>(null)
@@ -20,10 +21,10 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { name: 'Home', href: '/', icon: Home },
   {
     name: 'First Colony',
-    icon: Users,
+    href: '/first-colony',
+    icon: FirstColonyIcon,
     dropdown: [
       { name: 'Stephanie Bevard', href: '/team/stephanie-bevard', icon: Users },
       { name: 'Brandon Bevard', href: '/team/brandon-bevard', icon: Users },
@@ -31,6 +32,7 @@ const navLinks: NavLink[] = [
       { name: 'Jada Atwood', href: '/team/jada-atwood', icon: Users },
     ]
   },
+  { name: 'Home', href: '/', icon: Home },
   { 
     name: 'Neighborhoods', 
     icon: MapPin,
